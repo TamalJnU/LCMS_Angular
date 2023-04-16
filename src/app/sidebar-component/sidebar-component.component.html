@@ -1,0 +1,776 @@
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-light-primary elevation-4">
+    <!-- Brand Logo -->
+    <a routerLink="/home" href="#" class="brand-link">
+      <img src="\assets\Icons\logo-300.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-dark" style="color: rgb(49, 119, 115)">LCMS</span><span style="font-size: small; color: rgb(241, 118, 149)">Legal Case Management</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="aseets/img/credit/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Asif</a>
+        </div>
+      </div> -->
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a  href="#" routerLink="/home" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class=""></i>
+              </p>
+            </a>
+            <!-- <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Dashboard v1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index2.html" class="nav-link active">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Dashboard v2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Dashboard v3</p>
+                </a>
+              </li>
+            </ul> -->
+          </li>
+          <!-- <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="fa-solid fa-shop"></i>
+              <p><a routerLink="/home/about" href="#">
+                About
+              </a>
+                <span class="right badge badge-danger"></span>
+              </p>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-sharp fa-solid fa-compass"></i>
+              <p>
+                General Menu
+                <i class="fas fa-angle-left right"></i>
+                <!-- <span class="badge badge-info right">6</span> -->
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" routerLink="/general/lcms-statistics" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>LCMS Statistics</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/general/change-password" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Change Password</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/general/system-information" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>System Information</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/general/change-password" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Police Information</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/general/court-information" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Court Information</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/general/jail-information" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Jail Information</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/general/notice-board" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Notice Board</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-folder"></i>
+              <p>
+                Registers
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" routerLink="/register/thana-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Thana Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/register/police-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Police Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/register/court-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Court Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/register/judge-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Judge Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/register/public-prosecutor-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Public Prosecutor Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/register/jail-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Jail Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/register/jailer-register" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Jailer Register</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href=""  class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Others Register
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nested">
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/gun-license" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Gun License</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/received-inquiry-list" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Received Inquiry Slip</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/stuff-lost-and-found" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Stuff Lost and Found</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/arrest-warrent-register" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Arrest Warrent Register</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/court-verdict-register" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Court Verdict Register</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/jail-custody-register" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Jail Custody Register</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/community-policing-officer" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Community Policing Officer</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/smuggling-related-case-menu" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Smuggling Related Case Menu</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/trafficking-related-case-menu" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Trafficking Related Case Menu</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/information-entry-without-case" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Information Entry Without Case</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/child-abuse-and-torture" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Child Abuse and Torture</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/child-related-information" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Child Related Information</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/register/others-register/rape-and-women-related-cases" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Rape and Women Retaded Cases</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-person"></i>
+              <p>
+              Person Menu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" routerLink="/person/persons-case-entry" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Person's Case Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/persons-general-diary-entry" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Person's General Diary Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/case-initial-investigation-and-confirmation" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Case Initial Investigation and Confirmation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/lost-persons-entry" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Lost Person's Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/courts-cases-entry" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Court's Cases Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/bail" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Bail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/bailsman" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Bailsman</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/forwarding-to-court" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Forwarding to Court</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/forwarding-to-jail" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Forwarding to Jail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/received-or-released-by-jail" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Received/Released by Jail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/person/surveillane-or-follow-up" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Surveillance/Follow-up</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-file"></i>
+              <p>
+                Reports
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" routerLink="/reports/statistics-of-cases" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Statistics of Cases</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/reports/courts-reports" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Court's Reports</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/reports/jails-reports" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Jail's Reports</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/reports/thanas-reports" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Thana's Reports</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#"  class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Special Report(Crime)</p>
+                </a>
+                <ul class="nested">
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-crime/persons-report" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Person's Report</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-crime/case-investigation-progress" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Case Investigation Progress</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-crime/details-investigation-report" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Details Investigation Report</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-crime/list-of-reports" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>List of Reports</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Investigating Officer's Report</p>
+                </a>
+                <ul class="nested">
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/investigating-officers-report/adjourned-cases-reports" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Adjourned Cases Reports</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/investigating-officers-report/assigned-case-report" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Assigned Case Report</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/investigating-officers-report/special-surveillance-report" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Special Surveillance Report</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#"  class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Special Report(Monitoring)</p>
+                </a>
+                <ul class="nested">
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/user-audit-log" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>User Audit Log</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/user-based-daily-inserted-case-number" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>User Based Daily Inserted Case Number</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/information-verification" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Information Verification</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/confirmed-information-verification" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Confirmed Information Verification</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/number-of-cases-based-on-court-and-unit" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Number of Cases Based on Court and Unit</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/data-entry-report" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Data Entry Report</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" routerLink="/reports/special-report-monitoring/report-log" class="nav-link">
+                      <i class="fa-solid fa-circle-notch"></i>
+                      <p>Report Log</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              <p>
+                Search Menu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-person-based-on-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Person Based on Theme</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-person-based-on-cases-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Person Based on Case's Theme</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Case Based on Theme</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Case Based on Person's Theme</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-accused-forwarding-report" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Accused Forwarding Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Person Based on Case Number</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Advanced Person Search</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Advanced Case Search</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Vehicle Search</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Lost Person Search</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Case Based on Follow-up</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Legal Weapons</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Information without Case</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Case Based on Institution</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" routerLink="/search/search-case-based-on-persons-theme" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search NID</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <p>
+                Assistance Menu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Your Problems and Solutions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>User Manuals</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>NID Verification</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Operators</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-circle-question"></i>
+              <p>
+                Unacknowledged Body
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Unacknowledged Body</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Lost Persons</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-eye"></i>
+              <p>
+                Warrent
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Warrents List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Arrest Warrent</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Bench Warrent</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Search Warrent</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Court Summons</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <p>Wanted Persons</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-cogs"></i>
+              <p>
+                Manage
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a routerLink="/crud" href="#" class="nav-link">
+                  <i class="fas fa-users-cog"></i>
+                  <p> Manage Users</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fas fa-envelope"></i>
+                  <p> Send Email</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fas fa-sitemap"></i>
+                  <p> Manage System Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="fas fa-cog"></i>
+                  <p> Setting</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- <app-main></app-main> -->
+
+
