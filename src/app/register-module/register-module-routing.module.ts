@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: 'jail-register', component: JailRegisterComponent},
   { path: 'jailer-register', component: JailerRegisterComponent},
   { path: 'judge-register', component: JudgeRegisterComponent},
+  { path : '', component : ThanaRegisterComponent },
 
   { path: 'others-register', component: OthersRegisterComponent, children :
   [
@@ -50,7 +51,6 @@ const routes: Routes = [
 
   { path: 'police-register', component: PoliceRegisterComponent},
   { path: 'public-prosecutor-register', component: PublicProsecutorRegisterComponent},
-  { path : '', component : SidebarComponentComponent },
   { path : '**', component : SidebarComponentComponent }
 ];
 

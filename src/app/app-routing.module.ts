@@ -12,7 +12,8 @@ import { WarrentModuleComponent } from './warrent-module/warrent-module.componen
 
 const routes: Routes = [
 
-  { path: '', component: HomeModuleComponent, loadChildren:() =>import('./home-module/home-module.module').then(x=>x.HomeModuleModule) },
+  {path: '', redirectTo:'/home', pathMatch:'full'},
+  // { path: '', component: HomeModuleComponent, loadChildren:() =>import('./home-module/home-module.module').then(x=>x.HomeModuleModule) },
   { path: 'home', component: HomeModuleComponent, loadChildren:() =>import('./home-module/home-module.module').then(x=>x.HomeModuleModule) },
   { path: 'register', component: RegisterModuleComponent, loadChildren:() =>import('./register-module/register-module.module').then(x=>x.RegisterModuleModule) },
   { path: 'person', component: PersonMenuModuleComponent, loadChildren:() =>import('./person-menu-module/person-menu-module.module').then(x=>x.PersonMenuModuleModule) },
