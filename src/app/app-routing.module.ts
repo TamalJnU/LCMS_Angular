@@ -9,6 +9,7 @@ import { ReportsModuleComponent } from './reports-module/reports-module.componen
 import { SearchMenuModuleComponent } from './search-menu-module/search-menu-module.component';
 import { UnacknowledgedBodyModuleComponent } from './unacknowledged-body-module/unacknowledged-body-module.component';
 import { WarrentModuleComponent } from './warrent-module/warrent-module.component';
+import { ManageModuleComponent } from './manage-module/manage-module.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'search', component: SearchMenuModuleComponent, loadChildren:() =>import('./search-menu-module/search-menu-module.module').then(x=>x.SearchMenuModuleModule) },
   { path: 'unacknowledged-body', component: UnacknowledgedBodyModuleComponent, loadChildren:() =>import('./unacknowledged-body-module/unacknowledged-body-module.module').then(x=>x.UnacknowledgedBodyModuleModule) },
   { path: 'warrent', component: WarrentModuleComponent, loadChildren:() =>import('./warrent-module/warrent-module.module').then(x=>x.WarrentModuleModule) },
+  { path: 'manage', component: ManageModuleComponent, loadChildren:() =>import('./manage-module/manage-module.module').then(x=>x.ManageModuleModule) },
   { path: '**', component: HomeModuleComponent, loadChildren:() =>import('./home-module/home-module.module').then(x=>x.HomeModuleModule) }
 
 
