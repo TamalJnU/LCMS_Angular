@@ -12,6 +12,7 @@ import { PersonGeneralDiaryEntryComponent } from './person-general-diary-entry/p
 import { ReceivedOrReleasedByJailComponent } from './received-or-released-by-jail/received-or-released-by-jail.component';
 import { SurveillanceOrFollowUpComponent } from './surveillance-or-follow-up/surveillance-or-follow-up.component';
 import { SidebarComponentComponent } from '../sidebar-component/sidebar-component.component';
+import { PersonEntryComponent } from './person-entry/person-entry.component';
 
 const routes: Routes = [
   { path : 'person-case-entry', component : PersonCaseEntryComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path : 'forwarding-to-court', component : ForwardingToCourtComponent },
   { path : 'forwarding-to-jail', component : ForwardingToJailComponent },
   { path : 'lost-person-entry', component : LostPersonEntryComponent },
+  { path : 'person-entry', component : PersonEntryComponent },
   { path : 'person-general-diary-entry', component : PersonGeneralDiaryEntryComponent },
   { path : 'received-or-released-by-jail', component : ReceivedOrReleasedByJailComponent },
   { path : 'surveillance-or-follow-up', component : SurveillanceOrFollowUpComponent },

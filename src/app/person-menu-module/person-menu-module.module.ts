@@ -14,6 +14,7 @@ import { ForwardingToCourtComponent } from './forwarding-to-court/forwarding-to-
 import { ForwardingToJailComponent } from './forwarding-to-jail/forwarding-to-jail.component';
 import { ReceivedOrReleasedByJailComponent } from './received-or-released-by-jail/received-or-released-by-jail.component';
 import { SurveillanceOrFollowUpComponent } from './surveillance-or-follow-up/surveillance-or-follow-up.component';
+import { PersonEntryComponent } from './person-entry/person-entry.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SurveillanceOrFollowUpComponent } from './surveillance-or-follow-up/sur
     ForwardingToCourtComponent,
     ForwardingToJailComponent,
     ReceivedOrReleasedByJailComponent,
-    SurveillanceOrFollowUpComponent
+    SurveillanceOrFollowUpComponent,
+    PersonEntryComponent
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,512 @@
-<p>received-or-released-by-jail works!</p>
+<div class="content-wrapper" style="background-color: cadetblue">
+  <div class="container-fluid">
+    <form>
+      <br>
+      <h2>Accussed Received or Released Jail</h2>
+      <br>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="trCourtName" class="form-control-file">
+              <option value="DMP">Accussed Received by Jail</option>
+              <option value="RMP">Accussed Released by Jail</option>
+            </select>
+            <label class="form-label" for="form8Example1">Operation</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form8Example1" class="form-control-file" />
+            <label class="form-label" for="form8Example1">GR No.</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form8Example1" class="form-control-file" />
+            <label class="form-label" for="form8Example1">FIR No.</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="trCourtName" class="form-control-file">
+              <option value="Bagerhat">Bagerhat</option>
+              <option value="Bandarban">Bandarban</option>
+              <option value="Barguna">Barguna</option>
+              <option value="Barisal">Barisal</option>
+              <option value="Bhola">Bhola</option>
+              <option value="Bogra">Bogra</option>
+              <option value="Brahmanbaria">Brahmanbaria</option>
+              <option value="Chandpur">Chandpur</option>
+              <option value="Chittagong">Chittagong</option>
+              <option value="Chuadanga">Chuadanga</option>
+              <option value="Comilla">Comilla</option>
+              <option value="Cox's Bazar">Cox's Bazar</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Dinajpur">Dinajpur</option>
+              <option value="Faridpur">Faridpur</option>
+              <option value="Feni">Feni</option>
+              <option value="Gaibandha">Gaibandha</option>
+              <option value="Gazipur">Gazipur</option>
+              <option value="Gopalganj">Gopalganj</option>
+              <option value="Habiganj">Habiganj</option>
+              <option value="Jaipurhat">Jaipurhat</option>
+              <option value="Jamalpur">Jamalpur</option>
+              <option value="Jashore">Jashore</option>
+              <option value="Jhalakati">Jhalakati</option>
+              <option value="Jhenaidah">Jhenaidah</option>
+              <option value="Khagrachari">Khagrachari</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Kishoreganj">Kishoreganj</option>
+              <option value="Kurigram">Kurigram</option>
+              <option value="Kushtia">Kushtia</option>
+              <option value="Lakshmipur">Lakshmipur</option>
+              <option value="Lalmonirhat">Lalmonirhat</option>
+              <option value="Madaripur">Madaripur</option>
+              <option value="Magura">Magura</option>
+              <option value="Manikganj">Manikganj</option>
+              <option value="Meherpur">Meherpur</option>
+              <option value="Moulvibazar">Moulvibazar</option>
+              <option value="Munshiganj">Munshiganj</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Naogaon">Naogaon</option>
+              <option value="Narail">Narail</option>
+              <option value="Narayanganj">Narayanganj</option>
+              <option value="Narsingdi">Narsingdi</option>
+              <option value="Natore">Natore</option>
+              <option value="Nawabganj">Nawabganj</option>
+              <option value="Netrakona">Netrakona</option>
+              <option value="Nilphamari">Nilphamari</option>
+              <option value="Noakhali">Noakhali</option>
+              <option value="Pabna">Pabna</option>
+              <option value="Panchagarh">Panchagarh</option>
+              <option value="Patuakhali">Patuakhali</option>
+              <option value="Pirojpur">Pirojpur</option>
+              <option value="Rajbari">Rajbari</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Rangamati">Rangamati</option>
+              <option value="Rangamati">Rangamati</option>
+              <option value="Satkhira">Satkhira</option>
+              <option value="Shariatpur">Shariatpur</option>
+              <option value="Sherpur">Sherpur</option>
+              <option value="Sirajganj">Sirajganj</option>
+              <option value="Sunamganj">Sunamganj</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Tangail">Tangail</option>
+              <option value="Thakurgaon">Thakurgaon</option>
+            </select>
+            <label class="form-label" for="trCourtName">District</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="trThanaName" class="form-control-file" />
+            <label class="form-label" for="trThanaName">Thana Name</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="trCaseType" class="form-control-file">
+              <option value="GR">GR</option>
+              <option value="CR">CR</option>
+            </select>
+            <label class="form-label" for="trCaseType">Type of Case</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="trPenalCode" class="form-control-file">
+              <option value="The Penal Code, 1860">The Penal Code, 1860</option>
+              <option value="The Cattle Trespass Act, 1871">The Cattle Trespass Act, 1871</option>
+              <option value="The Explosive Substances Act, 1908">The Explosive Substances Act, 1908</option>
+              <option value="The Arms Act, 1878">The Arms Act, 1878</option>
+              <option value="The Prevention of Corruption Act, 1947">The Prevention of Corruption Act, 1947</option>
+              <option value="The Anti-Corruption Act, 1957">The Anti-Corruption Act, 1957</option>
+              <option value="The Special Powers Act, 1974">The Special Powers Act, 1974</option>
+              <option value="The Dowry Prohibition Act, 1980">The Dowry Prohibition Act, 1980</option>
+              <option value="The Narcotics (Control) Act, 1990"> The Narcotics (Control) Act, 1990</option>
+              <option value="The Women and Children Oppression Act, 1995">The Women and Children Oppression Act, 1995</option>
+              <option value="The Anti-Terrorism Act, 2013">The Anti-Terrorism Act, 2013</option>
+              <option value="Digital Security Act, 2018">Digital Security Act, 2018</option>
+            </select>
+            <label class="form-label" for="trPenalCode">Penal Code</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="trPenalSection" class="form-control-file" />
+            <label class="form-label" for="trPenalSection">Penal Section</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="trPenalSection" class="form-control-file" />
+            <label class="form-label" for="trPenalSection">Date of Case Issued</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="appFirstName" class="form-control-file" />
+            <label class="form-label" for="appFirstName">Name of Accussed</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="appFatherName" class="form-control-file" />
+            <label class="form-label" for="appFatherName">Father's Name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="appFatherName" class="form-control-file" />
+            <label class="form-label" for="appFatherName">Mother's Name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <textarea type="text" id="appFatherName" class="form-control-file" ></textarea>
+            <label class="form-label" for="appDoB">Address</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="appDoB" class="form-control-file" />
+            <label class="form-label" for="appDoB">Contact No.</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Date of Arrest</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Date of Hearing</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Date of Senting Jail</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Date of Releasing from Jail</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <textarea type="date" id="form8Example2" class="form-control-file"></textarea>
+            <label class="form-label" for="form8Example2">Bailsman Details</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <div class="form-outline">
+              <input type="text" id="ajailJailId" class="form-control-file" />
+              <label class="form-label" for="ajailJailId">Jail ID</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+              <input type="text" id="ajailJailName" class="form-control-file" />
+              <label class="form-label" for="ajailJailName">Jail Name</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <select type="dropdown" id="ajailJailType" class="form-control-file">
+                    <option value="Central Jail">Central Jail</option>
+                    <option value="District Jail">District Jail</option>
+                    <option value="Special Jail">Special Jail</option>
+                </select>
+                <label class="form-label" for="ajailJailType">Jail Type</label>
+            </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="ajailJailCity" class="form-control-file">
+              <option value="Bagerhat">Bagerhat</option>
+              <option value="Bandarban">Bandarban</option>
+              <option value="Barguna">Barguna</option>
+              <option value="Barisal">Barisal</option>
+              <option value="Bhola">Bhola</option>
+              <option value="Bogra">Bogra</option>
+              <option value="Brahmanbaria">Brahmanbaria</option>
+              <option value="Chandpur">Chandpur</option>
+              <option value="Chittagong">Chittagong</option>
+              <option value="Chuadanga">Chuadanga</option>
+              <option value="Comilla">Comilla</option>
+              <option value="Cox's Bazar">Cox's Bazar</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Dinajpur">Dinajpur</option>
+              <option value="Faridpur">Faridpur</option>
+              <option value="Feni">Feni</option>
+              <option value="Gaibandha">Gaibandha</option>
+              <option value="Gazipur">Gazipur</option>
+              <option value="Gopalganj">Gopalganj</option>
+              <option value="Habiganj">Habiganj</option>
+              <option value="Jaipurhat">Jaipurhat</option>
+              <option value="Jamalpur">Jamalpur</option>
+              <option value="Jashore">Jashore</option>
+              <option value="Jhalakati">Jhalakati</option>
+              <option value="Jhenaidah">Jhenaidah</option>
+              <option value="Khagrachari">Khagrachari</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Kishoreganj">Kishoreganj</option>
+              <option value="Kurigram">Kurigram</option>
+              <option value="Kushtia">Kushtia</option>
+              <option value="Lakshmipur">Lakshmipur</option>
+              <option value="Lalmonirhat">Lalmonirhat</option>
+              <option value="Madaripur">Madaripur</option>
+              <option value="Magura">Magura</option>
+              <option value="Manikganj">Manikganj</option>
+              <option value="Meherpur">Meherpur</option>
+              <option value="Moulvibazar">Moulvibazar</option>
+              <option value="Munshiganj">Munshiganj</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Naogaon">Naogaon</option>
+              <option value="Narail">Narail</option>
+              <option value="Narayanganj">Narayanganj</option>
+              <option value="Narsingdi">Narsingdi</option>
+              <option value="Natore">Natore</option>
+              <option value="Nawabganj">Nawabganj</option>
+              <option value="Netrakona">Netrakona</option>
+              <option value="Nilphamari">Nilphamari</option>
+              <option value="Noakhali">Noakhali</option>
+              <option value="Pabna">Pabna</option>
+              <option value="Panchagarh">Panchagarh</option>
+              <option value="Patuakhali">Patuakhali</option>
+              <option value="Pirojpur">Pirojpur</option>
+              <option value="Rajbari">Rajbari</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Rangamati">Rangamati</option>
+              <option value="Rangamati">Rangamati</option>
+              <option value="Satkhira">Satkhira</option>
+              <option value="Shariatpur">Shariatpur</option>
+              <option value="Sherpur">Sherpur</option>
+              <option value="Sirajganj">Sirajganj</option>
+              <option value="Sunamganj">Sunamganj</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Tangail">Tangail</option>
+              <option value="Thakurgaon">Thakurgaon</option>
+            </select>
+            <label class="form-label" for="ajailJailCity">Jail City</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Date of Bail Received</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Date of Case Settlement</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="acCourtName" class="form-control-file">
+                <option value="District Judge Court">District Judge Court</option>
+                <option value="Additional District Judge Court">Additional District Judge Court</option>
+                <option value="Joint District Judge Court">Joint District Judge Court</option>
+                <option value="Senior Assistant Judge Court">Senior Assistant Judge Court</option>
+                <option value="Assistant Judge Court">Assistant Judge Court</option>
+                <option value="Small Causes Court">Small Causes Court</option>
+                <option value="Family Courts">Family Courts</option>
+                <option value="Court of Sessions">Court of Sessions</option>
+                <option value="Magistrate Court">Magistrate Court</option>
+                <option value="High Court">High Court</option>
+                <option value="Appellate Division">Appellate Division</option>
+            </select>
+            <label class="form-label" for="acCourtName">Bail Given by Court</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="acCourtCity" class="form-control-file">
+              <option value="Bagerhat">Bagerhat</option>
+              <option value="Bandarban">Bandarban</option>
+              <option value="Barguna">Barguna</option>
+              <option value="Barisal">Barisal</option>
+              <option value="Bhola">Bhola</option>
+              <option value="Bogra">Bogra</option>
+              <option value="Brahmanbaria">Brahmanbaria</option>
+              <option value="Chandpur">Chandpur</option>
+              <option value="Chittagong">Chittagong</option>
+              <option value="Chuadanga">Chuadanga</option>
+              <option value="Comilla">Comilla</option>
+              <option value="Cox's Bazar">Cox's Bazar</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Dinajpur">Dinajpur</option>
+              <option value="Faridpur">Faridpur</option>
+              <option value="Feni">Feni</option>
+              <option value="Gaibandha">Gaibandha</option>
+              <option value="Gazipur">Gazipur</option>
+              <option value="Gopalganj">Gopalganj</option>
+              <option value="Habiganj">Habiganj</option>
+              <option value="Jaipurhat">Jaipurhat</option>
+              <option value="Jamalpur">Jamalpur</option>
+              <option value="Jashore">Jashore</option>
+              <option value="Jhalakati">Jhalakati</option>
+              <option value="Jhenaidah">Jhenaidah</option>
+              <option value="Khagrachari">Khagrachari</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Kishoreganj">Kishoreganj</option>
+              <option value="Kurigram">Kurigram</option>
+              <option value="Kushtia">Kushtia</option>
+              <option value="Lakshmipur">Lakshmipur</option>
+              <option value="Lalmonirhat">Lalmonirhat</option>
+              <option value="Madaripur">Madaripur</option>
+              <option value="Magura">Magura</option>
+              <option value="Manikganj">Manikganj</option>
+              <option value="Meherpur">Meherpur</option>
+              <option value="Moulvibazar">Moulvibazar</option>
+              <option value="Munshiganj">Munshiganj</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Naogaon">Naogaon</option>
+              <option value="Narail">Narail</option>
+              <option value="Narayanganj">Narayanganj</option>
+              <option value="Narsingdi">Narsingdi</option>
+              <option value="Natore">Natore</option>
+              <option value="Nawabganj">Nawabganj</option>
+              <option value="Netrakona">Netrakona</option>
+              <option value="Nilphamari">Nilphamari</option>
+              <option value="Noakhali">Noakhali</option>
+              <option value="Pabna">Pabna</option>
+              <option value="Panchagarh">Panchagarh</option>
+              <option value="Patuakhali">Patuakhali</option>
+              <option value="Pirojpur">Pirojpur</option>
+              <option value="Rajbari">Rajbari</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Rangamati">Rangamati</option>
+              <option value="Rangamati">Rangamati</option>
+              <option value="Satkhira">Satkhira</option>
+              <option value="Shariatpur">Shariatpur</option>
+              <option value="Sherpur">Sherpur</option>
+              <option value="Sirajganj">Sirajganj</option>
+              <option value="Sunamganj">Sunamganj</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Tangail">Tangail</option>
+              <option value="Thakurgaon">Thakurgaon</option>
+            </select>
+            <label class="form-label" for="acCourtCity">Court City</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form8Example2" class="form-control-file" />
+            <label class="form-label" for="form8Example2">Judge ID</label>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Name input -->
+          <div class="form-outline">
+            <button type="submit" class="btn btn-success">Sent to Court</button>
+            <button type="reset" class="btn btn-warning">Cancel Email</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="container-fluid" >
+    <br>
+    <h3>Jail Forwarding List</h3>
+    <br>
+      <table border="2" class="table table-stripped" style="background-color: cadetblue;">
+        <thead>
+          <th>Operation</th>
+          <th>GR No.</th>
+          <th>FIR No.</th>
+          <th>District</th>
+          <th>Thana Name</th>
+          <th>Case Type</th>
+          <th>Penal Code</th>
+          <th>Penal Section</th>
+          <th>Date of Case Issued</th>
+          <th>Name of Accussed</th>
+          <th>Father's Name</th>
+          <th>Mother's Name</th>
+          <th>Address</th>
+          <th>Contact No.</th>
+          <th>Date of Arrest</th>
+          <th>Date of Hearing</th>
+          <th>Date of Senting Jail</th>
+          <th>Date of Releasing from Jail</th>
+          <th>Jail ID</th>
+          <th>Jail Name</th>
+          <th>Jail Type</th>
+          <th>Jail City</th>
+          <th>Date of Bail Received</th>
+          <th>Date of Case Settlement</th>
+          <th>Bail Given by Court</th>
+          <th>Court City</th>
+          <th>Judge ID</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+              <button class="btn btn-success">View</button>
+              <button class="btn btn-light">Edit</button>
+              <button class="btn btn-warning">Delete</button>
+          </td>
+        </tbody>
+      </table>
+  </div>
+
+</div>
+
+
