@@ -11,6 +11,7 @@ import { CourtInformationComponent } from './court-information/court-information
 import { JailInformationComponent } from './jail-information/jail-information.component';
 import { NoticeBoardComponent } from './notice-board/notice-board.component';
 import { JailerInformationComponent } from './jailer-information/jailer-information.component';
+import { PpInformationComponent } from './pp-information/pp-information.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { JailerInformationComponent } from './jailer-information/jailer-informat
     CourtInformationComponent,
     JailInformationComponent,
     NoticeBoardComponent,
-    JailerInformationComponent
+    JailerInformationComponent,
+    PpInformationComponent
   ],
   imports: [
     CommonModule,

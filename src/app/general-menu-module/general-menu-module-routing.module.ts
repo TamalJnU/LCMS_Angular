@@ -9,6 +9,7 @@ import { PoliceInformationComponent } from './police-information/police-informat
 import { SystemInformationComponent } from './system-information/system-information.component';
 import { SidebarComponentComponent } from '../sidebar-component/sidebar-component.component';
 import { JailerInformationComponent } from './jailer-information/jailer-information.component';
+import { PpInformationComponent } from './pp-information/pp-information.component';
 
 const routes: Routes = [
   { path : 'change-password', component : ChangePasswordComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path : 'lcms-statistics', component : LcmsStatisticsComponent },
   { path : 'notice-board', component : NoticeBoardComponent },
   { path : 'police-information', component : PoliceInformationComponent },
+  { path : 'pp-information', component : PpInformationComponent },
   { path : 'system-information', component : SystemInformationComponent },
   { path : '', component : SidebarComponentComponent },
   { path : '**', component : SidebarComponentComponent }
