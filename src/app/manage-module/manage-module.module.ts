@@ -12,6 +12,7 @@ import { AddPpComponent } from './add-pp/add-pp.component';
 import { SendEmailComponent } from './send-email/send-email.component';
 import { ManageSystemLogComponent } from './manage-system-log/manage-system-log.component';
 import { SettingComponent } from './setting/setting.component';
+import { AddOperatorComponent } from './add-operator/add-operator.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SettingComponent } from './setting/setting.component';
     AddPpComponent,
     SendEmailComponent,
     ManageSystemLogComponent,
-    SettingComponent
+    SettingComponent,
+    AddOperatorComponent
   ],
   imports: [
     CommonModule,
