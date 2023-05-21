@@ -10,6 +10,7 @@ import { AddPpComponent } from './add-pp/add-pp.component';
 import { ManageSystemLogComponent } from './manage-system-log/manage-system-log.component';
 import { SendEmailComponent } from './send-email/send-email.component';
 import { SettingComponent } from './setting/setting.component';
+import { CommunityPoliceFormComponent } from './other-forms/community-police-form/community-police-form.component';
 
 const routes: Routes = [
   { path : 'add-court', component : AddCourtComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path : 'add-operator', component : AddOperatorComponent },
   { path : 'manage-system-log', component : ManageSystemLogComponent },
   { path : 'send-email', component : SendEmailComponent },
-  { path : 'setting', component : SettingComponent }
+  { path : 'setting', component : SettingComponent },
+  { path : 'community-police-form', component : CommunityPoliceFormComponent }
 ];
 
 @NgModule({

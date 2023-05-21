@@ -13,6 +13,8 @@ import { SendEmailComponent } from './send-email/send-email.component';
 import { ManageSystemLogComponent } from './manage-system-log/manage-system-log.component';
 import { SettingComponent } from './setting/setting.component';
 import { AddOperatorComponent } from './add-operator/add-operator.component';
+import { OtherFormsComponent } from './other-forms/other-forms.component';
+import { CommunityPoliceFormComponent } from './other-forms/community-police-form/community-police-form.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { AddOperatorComponent } from './add-operator/add-operator.component';
     SendEmailComponent,
     ManageSystemLogComponent,
     SettingComponent,
-    AddOperatorComponent
+    AddOperatorComponent,
+    OtherFormsComponent,
+    CommunityPoliceFormComponent
   ],
   imports: [
     CommonModule,
