@@ -22,6 +22,11 @@ import { TraffickingRelatedCaseMenuComponent } from './others_register/trafficki
 import { PoliceRegisterComponent } from './police-register/police-register.component';
 import { PublicProsecutorRegisterComponent } from './public-prosecutor-register/public-prosecutor-register.component';
 import { SidebarComponentComponent } from '../sidebar-component/sidebar-component.component';
+import { ArrestWarrentRegisterComponent } from './others_register/arrest-warrent-register/arrest-warrent-register.component';
+import { BenchWarrentRegisterComponent } from './others_register/bench-warrent-register/bench-warrent-register.component';
+import { SearchWarrentRegisterComponent } from './others_register/search-warrent-register/search-warrent-register.component';
+import { CourtSummonsRegisterComponent } from './others_register/court-summons-register/court-summons-register.component';
+import { WantedPersonsRegisterComponent } from './others_register/wanted-persons-register/wanted-persons-register.component';
 
 const routes: Routes = [
   { path: 'thana-register', component: ThanaRegisterComponent},
@@ -33,7 +38,11 @@ const routes: Routes = [
 
   { path: 'others-register', component: OthersRegisterComponent, children :
   [
-    { path: 'arrest-warrent-register', component: ArrestWarrentComponent},
+    { path: 'arrest-warrent-register', component: ArrestWarrentRegisterComponent},
+    { path: 'bench-warrent-register', component: BenchWarrentRegisterComponent},
+    { path: 'search-warrent-register', component: SearchWarrentRegisterComponent},
+    { path: 'court-summons-register', component: CourtSummonsRegisterComponent},
+    { path: 'wanted-persons-register', component: WantedPersonsRegisterComponent},
     { path: 'child-abuse-and-torture', component: ChildAbuseAndTortureComponent},
     { path: 'child-related-information', component: ChildRelatedInformationComponent},
     { path: 'community-policing-officer', component: CommunityPolicingOfficerComponent},

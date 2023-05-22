@@ -24,6 +24,10 @@ import { InformationEntryWithoutCaseComponent } from './others_register/informat
 import { ChildAbuseAndTortureComponent } from './others_register/child-abuse-and-torture/child-abuse-and-torture.component';
 import { ChildRelatedInformationComponent } from './others_register/child-related-information/child-related-information.component';
 import { RapeAndWomenRelatedCasesComponent } from './others_register/rape-and-women-related-cases/rape-and-women-related-cases.component';
+import { BenchWarrentRegisterComponent } from './others_register/bench-warrent-register/bench-warrent-register.component';
+import { SearchWarrentRegisterComponent } from './others_register/search-warrent-register/search-warrent-register.component';
+import { CourtSummonsRegisterComponent } from './others_register/court-summons-register/court-summons-register.component';
+import { WantedPersonsRegisterComponent } from './others_register/wanted-persons-register/wanted-persons-register.component';
 
 
 @NgModule({
@@ -49,7 +53,11 @@ import { RapeAndWomenRelatedCasesComponent } from './others_register/rape-and-wo
     InformationEntryWithoutCaseComponent,
     ChildAbuseAndTortureComponent,
     ChildRelatedInformationComponent,
-    RapeAndWomenRelatedCasesComponent
+    RapeAndWomenRelatedCasesComponent,
+    BenchWarrentRegisterComponent,
+    SearchWarrentRegisterComponent,
+    CourtSummonsRegisterComponent,
+    WantedPersonsRegisterComponent,
   ],
   imports: [
     CommonModule,

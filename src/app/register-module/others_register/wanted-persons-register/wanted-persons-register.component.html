@@ -2,10 +2,22 @@
   <div class="container-fluid">
       <form>
           <br>
-          <h2>Court Verdict Register</h2>
+          <h2>Add Wanted Person</h2>
           <br>
 
           <div class="row">
+              <div class="col">
+                  <div class="form-outline">
+                    <select type="dropdown" id="appGender" class="form-control-file" name="gender">
+                      <option value="Arrest Warrent">Arrest Warrent</option>
+                      <option value="Bench Warrent">Bench Warrent</option>
+                      <option value="Court Summons">Court Summons</option>
+                      <option value="Search Warrent">Search Warrent</option>
+                      <option value="Wanted Person">Wanted Person</option>
+                    </select>
+                    <label class="form-label" for="appGender">Forms of Warrent</label>
+                  </div>
+              </div>
             <div class="col">
               <div class="form-outline">
                 <input type="text" id="form8Example2" class="form-control-file" />
@@ -107,7 +119,7 @@
           <div class="row">
             <div class="col">
               <div class="form-outline">
-                <textarea type="text" id="form8Example2" class="form-control-file"></textarea>
+                <input type="text" id="form8Example2" class="form-control-file" />
                 <label class="form-label" for="form8Example2">Name of Accussed</label>
               </div>
             </div>
@@ -212,22 +224,19 @@
             <div class="col">
               <div class="form-outline">
                 <input type="text" id="form8Example2" class="form-control-file" />
-                <label class="form-label" for="form8Example2">Judge Name</label>
+                <label class="form-label" for="form8Example2">No. of Days Allowed</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form8Example2" class="form-control-file" />
+                <label class="form-label" for="form8Example2">Distance from Court</label>
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
                 <input type="text" id="form8Example2" class="form-control-file" />
                 <label class="form-label" for="form8Example2">No. of Attached</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="form-outline">
-                <textarea type="text" id="form8Example2" class="form-control-file" ></textarea>
-                <label class="form-label" for="form8Example2">Sentence</label>
               </div>
             </div>
           </div>
@@ -352,25 +361,25 @@
                   <option value="Tangail">Tangail</option>
                   <option value="Thakurgaon">Thakurgaon</option>
                 </select>
-                <label class="form-label" for="acCourtCity">Abiding District/Jail Name</label>
+                <label class="form-label" for="acCourtCity">Abiding District Name</label>
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
                 <input type="text" id="appFatherName" class="form-control-file" />
-                <label class="form-label" for="appFatherName">Abiding Thana/Unit Name/Jailer Name</label>
+                <label class="form-label" for="appFatherName">Abiding Thana/Unit Name</label>
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
                 <input type="date" id="appDoB" class="form-control-file" />
-                <label class="form-label" for="appDoB">Thana ID/Jail ID</label>
+                <label class="form-label" for="appDoB">Thana ID/No.</label>
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
                 <input type="date" id="appDoB" class="form-control-file" />
-                <label class="form-label" for="appDoB">Date of Order Received by Thana/Jail</label>
+                <label class="form-label" for="appDoB">Date of Order Received by Thana</label>
               </div>
             </div>
           </div>
@@ -379,7 +388,7 @@
             <div class="col">
               <div class="form-outline">
                 <input type="text" id="form8Example2" class="form-control-file" />
-                <label class="form-label" for="form8Example2">Name of Order Abiding Officer/Jailer</label>
+                <label class="form-label" for="form8Example2">Name of Order Abiding Officer</label>
               </div>
             </div>
             <div class="col">
@@ -391,13 +400,7 @@
             <div class="col">
               <div class="form-outline">
                 <input type="date" id="form8Example2" class="form-control-file" />
-                <label class="form-label" for="form8Example2">Date of Senting Jail from Thana</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-outline">
-                <input type="date" id="form8Example2" class="form-control-file" />
-                <label class="form-label" for="form8Example2">Date of Receiving Accused</label>
+                <label class="form-label" for="form8Example2">Date of Senting Court from Thana</label>
               </div>
             </div>
             <div class="col">
@@ -413,103 +416,18 @@
             <div class="col-md-4">
               <!-- Name input -->
               <div class="form-outline">
-                <a href="#" routerLink=""><button type="submit" class="btn btn-success">Submit</button></a>
+                <a href="#" routerLink="/warrent/warrents-list"><button type="submit" class="btn btn-success">Submit</button></a>
                 <button type="reset" class="btn btn-warning">Reset</button>
               </div>
             </div>
           </div>
-          <br>
+
       </form>
+      <br>
   </div>
 
-  <br>
-  <br>
-
-  <div class="container-fluid" >
-    <table border="2" class="table table-stripped" >
-      <thead>
-        <th>FIR/Case No.</th>
-        <th>Thana Name</th>
-        <th>Case Type</th>
-        <th>GR No.</th>
-        <th>CR No.</th>
-        <th>Non-GR No.</th>
-        <th>Non-FIR No.</th>
-        <th>Paper Cliping No.</th>
-        <th>SGR No.</th>
-        <th>Date</th>
-        <th>Penal Code</th>
-        <th>Penal Section</th>
-        <th>Name of Accussed</th>
-        <th>Court No.</th>
-        <th>Court Name</th>
-        <th>Court City</th>
-        <th>No. of Days Allowed</th>
-        <th>Distance from Court</th>
-        <th>No. of Attached</th>
-        <th>Court Deposite Date</th>
-        <th>Court Officer Receive Date</th>
-        <th>Court Officer Delivery Date</th>
-        <th>Court Officer Get Thana Date</th>
-        <th>Court Submit Date</th>
-        <th>Court Clerk Signature Date</th>
-        <th>Court Remarks</th>
-        <th>Status</th>
-        <th>Abiding District Name</th>
-        <th>Abiding Thana/Unit Name</th>
-        <th>Thana ID/No.</th>
-        <th>Date of Order Received by Thana</th>
-        <th>Name of Order Abiding Officer</th>
-        <th>Actual Date of Abiding Order</th>
-        <th>Date of Senting Court from Thana</th>
-        <th>Comment</th>
-        <th>Actions</th>
-      </thead>
-      <tbody>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-            <button class="btn btn-success">View</button>
-            <button class="btn btn-warning">Edit</button>
-        </td>
-      </tbody>
-    </table>
-</div>
 
 </div>
+
+
 
