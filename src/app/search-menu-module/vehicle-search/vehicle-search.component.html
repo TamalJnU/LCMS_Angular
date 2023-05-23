@@ -1,1 +1,184 @@
-<p>vehicle-search works!</p>
+<div class="content-wrapper" style="background-color: cadetblue">
+    <div class="container-fluid">
+      <form>
+        <br>
+        <h2>Vehicle Search</h2>
+        <br>
+  
+        <div class="accordion" id="accordion" >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsing" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Search Options
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#accordion" >
+              <div class="accordion-body">
+  
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="apPoliceId" class="form-control-file" />
+                        <label class="form-label" for="apPoliceId">Vehicle ID</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="apPoliceId" class="form-control-file" />
+                        <label class="form-label" for="apPoliceId">Thana/Court/Jail ID</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="apThanaName" class="form-control-file" />
+                        <label class="form-label" for="apThanaName">Thana/Court/Jail Name/Workplace</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="apPoliceId" class="form-control-file" />
+                      <label class="form-label" for="apPoliceId">Police/Judge/PP/Jailer ID</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="apDepartmentId" class="form-control-file"/>
+                      <label class="form-label" for="apDepartmentId">Department ID</label>
+                    </div>
+                  </div>
+
+                </div>
+  
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                        <select type="dropdown" id="apDepartmentType" class="form-control-file">
+                            <option value="Armed Branch/Range Police">Armed Branch/Range Police</option>
+                            <option value="DMP">DMP</option>
+                            <option value="RMP">RMP</option>
+                            <option value="RpMP">RpMP</option>
+                            <option value="SMP">SMP</option>
+                            <option value="KMP">KMP</option>
+                            <option value="CMP">CMP</option>
+                            <option value="BMP">BMP</option>
+                            <option value="GMP">GMP</option>
+                            <option value="RAB">RAB</option>
+                            <option value="PBI">PBI</option>
+                            <option value="CID">CID</option>
+                            <option value="DB">DB</option>
+                            <option value="Court">Court</option>
+                            <option value="Jail">Jail</option>
+                        </select>
+                        <label class="form-label" for="apDepartmentType">Department Type</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="apBatch" class="form-control-file"/>
+                        <label class="form-label" for="apBatch">Batch</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <select type="dropdown" id="apRank" class="form-control-file">
+                        <option value="Constable">Constable</option>
+                        <option value="ASI">ASI</option>
+                        <option value="SI">SI</option>
+                        <option value="OC">OC</option>
+                        <option value="ASP">ASP</option>
+                        <option value="SASP">SASP</option>
+                        <option value="AdSP">AdSP</option>
+                        <option value="ADIGP">ADIGP</option>
+                        <option value="DIG">DIG</option>
+                        <option value="AdIGP">AdIGP</option>
+                        <option value="IGP">IGP</option>
+                        <option value="Judge">Judge</option>
+                        <option value="PP">PP</option>
+                        <option value="Jailer">Jailer</option>
+                    </select>
+                    <label class="form-label" for="apRank">Rank</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="apWeaponSerial" class="form-control-file"/>
+                      <label class="form-label" for="apWeaponSerial">Weapon Serial</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <br>
+  
+                <div class="container" style="width: 10%;">
+                <div class="row" >
+                  <div class="col" >
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <button type="submit" class="btn btn-warning">Search</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div class="container-fluid" >
+          <br>
+            <table border="2" class="table table-stripped">
+              <thead>
+                <th>GR No.</th>
+                <th>FIR No.</th>
+                <th>District</th>
+                <th>Thana Name</th>
+                <th>Case Type</th>
+                <th>Penal Code</th>
+                <th>Penal Section</th>
+                <th>Date of Case Issued</th>
+                <th>Name of Accussed</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Address</th>
+                <th>Contact No.</th>
+                <th>Date of Arrest</th>
+                <th>Date of Senting Court</th>
+                <th>Court Name</th>
+                <th>Court City</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button class="btn btn-success">View</button>
+                    <button class="btn btn-light">Edit</button>
+                    <button class="btn btn-warning">Delete</button>
+                </td>
+              </tbody>
+            </table>
+        </div> -->
+  
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  

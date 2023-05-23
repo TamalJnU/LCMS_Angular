@@ -1,1 +1,686 @@
-<p>assigned-case-report works!</p>
+<div class="content-wrapper" style="background-color: cadetblue">
+    <div class="container-fluid">
+      <form>
+        <h2></h2>
+        <h2>Assigned Case Report</h2>
+  
+        <div class="accordion" id="accordion" >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Case Source &amp; Others
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion" >
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form8Example1" class="form-control-file" />
+                      <label class="form-label" for="form8Example1">Case Source</label>
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <div class="row">
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Case Recorder</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example4" class="form-control-file" />
+                      <label class="form-label" for="form8Example4">BP/Court ID</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <select type="dropdown" id="designation" class="form-control-file">
+                        <option value="Constable">Constable</option>
+                        <option value="ASI">ASI</option>
+                        <option value="SI">SI</option>
+                        <option value="OC">OC</option>
+                        <option value="Court">Court</option>
+                      </select>
+                      <label class="form-label" for="designation">Designation</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Thana</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- Name input -->
+                      <div class="form-outline">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Convicted's Personal Information
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion" >
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example1" class="form-control-file" />
+                      <label class="form-label" for="form8Example1">Full Name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Father's Name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Mothers's Name</label>
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Estimated Age</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <select type="dropdown" id="gender" class="form-control-file" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                      <label class="form-label" for="gender">Gender</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example4" class="form-control-file" />
+                      <label class="form-label" for="form8Example4">Husband/Wife</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <select type="dropdown" id="education" class="form-control-file">
+                        <option value="Illiterate">Illiterate</option>
+                        <option value="Below JSC">Below JSC</option>
+                        <option value="JSC">JSC</option>
+                        <option value="SSC">SSC</option>
+                        <option value="HSC">HSC</option>
+                        <option value="Graduation">BSC</option>
+                        <option value="Post-Graduation">MSC</option>
+                      </select>
+                      <label class="form-label" for="form8Example5">Education</label>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                          <textarea type="text" id="form8Example1" class="form-control-file"></textarea>
+                          <label class="form-label" for="form8Example1">Address</label>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- Name input -->
+                      <div class="form-outline">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Inquiry Details
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="number" id="entryNo" class="form-control-file"/>
+                      <label class="form-label" for="entryNo">Record Entry No.</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="date" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Record Entry Date</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="time" id="form8Example2" class="form-control-file"/>
+                      <label class="form-label" for="form8Example2">Record Entry Time</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Record Entry Place</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file"/>
+                      <label class="form-label" for="form8Example2">Record Entry Summery</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <textarea type="text" id="form8Example1" class="form-control-file"></textarea>
+                      <label class="form-label" for="form8Example1">Details Entry</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- Name input -->
+                      <div class="form-outline">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Convict with Action
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="text" id="entryNo" class="form-control-file"/>
+                      <label class="form-label" for="entryNo">Arrested &amp; Court Forwarded Convict</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="text" id="entryNo" class="form-control-file"/>
+                      <label class="form-label" for="entryNo">Arrested &amp; Bailed Convict</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="text" id="entryNo" class="form-control-file"/>
+                      <label class="form-label" for="entryNo">Absconded Convict</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- Name input -->
+                      <div class="form-outline">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Identification
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                          <select type="dropdown" id="education" class="form-control-file">
+                              <option value="Still Lost">Still Lost</option>
+                              <option value="Has Found">Has Found</option>
+                          </select>
+                          <label class="form-label" for="form8Example5">Lost/Found</label>
+                        </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                          <select type="dropdown" id="education" class="form-control-file">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                          </select>
+                          <label class="form-label" for="form8Example5">Identified</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                          <select type="dropdown" id="education" class="form-control-file">
+                              <option value="N/A">N/A</option>
+                              <option value="Awami League">Awami League</option>
+                              <option value="Bangladesh Nationalist Party">Bangladesh Nationalist Party</option>
+                              <option value="National Party">National Party</option>
+                              <option value="Others">Others</option>
+                          </select>
+                          <label class="form-label" for="form8Example5">Political Identity</label>
+                        </div>
+                  </div>
+                </div>
+  
+                <hr>
+  
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">National ID</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Bodily Scratches</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Person's Type/Status</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <!-- Name input -->
+                      <div class="form-outline">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                Report Details Entry
+              </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <input type="number" id="entryNo" class="form-control-file"/>
+                      <label class="form-label" for="entryNo">Report Entry No.</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="date" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Report Entry Date</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="time" id="form8Example2" class="form-control-file"/>
+                      <label class="form-label" for="form8Example2">Report Entry Time</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Report Entry Place</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col">
+                    <!-- Email input -->
+                    <div class="form-outline">
+                      <input type="text" id="form8Example2" class="form-control-file"/>
+                      <label class="form-label" for="form8Example2">Report Entry Summery</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <textarea type="text" id="form8Example1" class="form-control-file"></textarea>
+                      <label class="form-label" for="form8Example1">Details Report Entry</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <hr/>
+  
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                      <button type="reset" class="btn btn-warning">Clear</button>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <br>
+        <br>
+  
+        <div class="row">
+          <div class="col-md-4">
+            <!-- Name input -->
+            <div class="form-outline">
+              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+    <br>
+    <br>
+  
+    <div class="container-fluid" >
+      <table border="2" class="table table-stripped" style="background-color: cadetblue">
+        <thead>
+          <th>Case Source</th>
+          <th>Case Recorder</th>
+          <th>BP/Court ID</th>
+          <th>Designation</th>
+          <th>Thana</th>
+          <th>Full Name</th>
+          <th>Father's Name</th>
+          <th>Mothers's Name</th>
+          <th>Estimated Age</th>
+          <th>Gender</th>
+          <th>Husband/Wife</th>
+          <th>Education</th>
+          <th>Country</th>
+          <th>Division</th>
+          <th>District</th>
+          <th>Thana</th>
+          <th>Union</th>
+          <th>Word</th>
+          <th>Village</th>
+          <th>Road/House</th>
+          <th>Record Entry No.</th>
+          <th>Record Entry Date</th>
+          <th>Record Entry Time</th>
+          <th>Record Entry Place</th>
+          <th>Record Entry Summery</th>
+          <th>Details Entry</th>
+          <th>Convicted No.</th>
+          <th>Full Name</th>
+          <th>Father's Name</th>
+          <th>Mothers's Name</th>
+          <th>Estimated Age</th>
+          <th>Gender</th>
+          <th>Husband/Wife</th>
+          <th>Education</th>
+          <th>Estimated Year of Birth</th>
+          <th>Religion</th>
+          <th>Cast</th>
+          <th>Country</th>
+          <th>Division</th>
+          <th>District</th>
+          <th>Thana</th>
+          <th>Union</th>
+          <th>Word</th>
+          <th>Village</th>
+          <th>Road/House</th>
+          <th>Post Code</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Passport No.</th>
+          <th>TIN No.</th>
+          <th>Photo</th>
+          <th>Document</th>
+          <th>Arrested &amp; Court Forwarded Convict</th>
+          <th>Arrested &amp; Bailed Convict</th>
+          <th>Absconded Convict</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Eye</th>
+          <th>Hair</th>
+          <th>Bread</th>
+          <th>Nose</th>
+          <th>Forehead</th>
+          <th>Body Shape</th>
+          <th>Face Shape</th>
+          <th>Chin</th>
+          <th>Skin Color</th>
+          <th>Mustaches</th>
+          <th>Ear</th>
+          <th>Voice</th>
+          <th>Lost/Found</th>
+          <th>Identified</th>
+          <th>Political Identity</th>
+          <th>National ID</th>
+          <th>Bodily Scratches</th>
+          <th>Person's Type/Status</th>
+          <th>Forms of Offences</th>
+          <th>Notable Offences</th>
+          <th>Surrender Related Information</th>
+          <th>Probability of Performing Offences</th>
+          <th>Arrest Related Information</th>
+          <th>FIR No.</th>
+          <th>Corrupted/Wicked</th>
+          <th>Illegal Arms Related Information</th>
+          <th>Legal Arms Related Information</th>
+          <th>Last Released Date from Jail</th>
+          <th>Last Date of Arrest</th>
+          <th>Bettor</th>
+          <th>Extrimist</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+              <button class="btn btn-success">View</button>
+              <button class="btn btn-light">Edit</button>
+              <button class="btn btn-warning">Delete</button>
+          </td>
+        </tbody>
+      </table>
+    </div>
+  
+  
+  
+  </div>
+  

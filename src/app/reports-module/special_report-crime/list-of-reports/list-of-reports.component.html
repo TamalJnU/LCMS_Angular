@@ -1,1 +1,258 @@
-<p>list-of-reports works!</p>
+<div class="content-wrapper" style="background-color: cadetblue">
+    <div class="container-fluid">
+      <form>
+        <br>
+        <h2>Reports List</h2>
+        <br>
+  
+        <div class="accordion" id="accordion" >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsing" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Search Options
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#accordion" >
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                      <select type="dropdown" id="acCourtName" class="form-control-file">
+                          <option value="District Judge Court">District Judge Court</option>
+                          <option value="Additional District Judge Court">Additional District Judge Court</option>
+                          <option value="Joint District Judge Court">Joint District Judge Court</option>
+                          <option value="Senior Assistant Judge Court">Senior Assistant Judge Court</option>
+                          <option value="Assistant Judge Court">Assistant Judge Court</option>
+                          <option value="Small Causes Court">Small Causes Court</option>
+                          <option value="Family Courts">Family Courts</option>
+                          <option value="Court of Sessions">Court of Sessions</option>
+                          <option value="Magistrate Court">Magistrate Court</option>
+                          <option value="High Court">High Court</option>
+                          <option value="Appellate Division">Appellate Division</option>
+                      </select>
+                      <label class="form-label" for="acCourtName">Court Name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <select type="dropdown" id="trCourtName" class="form-control-file">
+                        <option value="DMP">DMP</option>
+                        <option value="RMP">RMP</option>
+                        <option value="RpMP">RpMP</option>
+                        <option value="SMP">SMP</option>
+                        <option value="KMP">KMP</option>
+                        <option value="CMP">CMP</option>
+                        <option value="BMP">BMP</option>
+                        <option value="GMP">GMP</option>
+                        <option value="Bagerhat">Bagerhat</option>
+                        <option value="Bandarban">Bandarban</option>
+                        <option value="Barguna">Barguna</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Bhola">Bhola</option>
+                        <option value="Bogra">Bogra</option>
+                        <option value="Brahmanbaria">Brahmanbaria</option>
+                        <option value="Chandpur">Chandpur</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Chuadanga">Chuadanga</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Cox's Bazar">Cox's Bazar</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Dinajpur">Dinajpur</option>
+                        <option value="Faridpur">Faridpur</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Gaibandha">Gaibandha</option>
+                        <option value="Gazipur">Gazipur</option>
+                        <option value="Gopalganj">Gopalganj</option>
+                        <option value="Habiganj">Habiganj</option>
+                        <option value="Jaipurhat">Jaipurhat</option>
+                        <option value="Jamalpur">Jamalpur</option>
+                        <option value="Jashore">Jashore</option>
+                        <option value="Jhalakati">Jhalakati</option>
+                        <option value="Jhenaidah">Jhenaidah</option>
+                        <option value="Khagrachari">Khagrachari</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Kishoreganj">Kishoreganj</option>
+                        <option value="Kurigram">Kurigram</option>
+                        <option value="Kushtia">Kushtia</option>
+                        <option value="Lakshmipur">Lakshmipur</option>
+                        <option value="Lalmonirhat">Lalmonirhat</option>
+                        <option value="Madaripur">Madaripur</option>
+                        <option value="Magura">Magura</option>
+                        <option value="Manikganj">Manikganj</option>
+                        <option value="Meherpur">Meherpur</option>
+                        <option value="Moulvibazar">Moulvibazar</option>
+                        <option value="Munshiganj">Munshiganj</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Naogaon">Naogaon</option>
+                        <option value="Narail">Narail</option>
+                        <option value="Narayanganj">Narayanganj</option>
+                        <option value="Narsingdi">Narsingdi</option>
+                        <option value="Natore">Natore</option>
+                        <option value="Nawabganj">Nawabganj</option>
+                        <option value="Netrakona">Netrakona</option>
+                        <option value="Nilphamari">Nilphamari</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Pabna">Pabna</option>
+                        <option value="Panchagarh">Panchagarh</option>
+                        <option value="Patuakhali">Patuakhali</option>
+                        <option value="Pirojpur">Pirojpur</option>
+                        <option value="Rajbari">Rajbari</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Rangamati">Rangamati</option>
+                        <option value="Rangamati">Rangamati</option>
+                        <option value="Satkhira">Satkhira</option>
+                        <option value="Shariatpur">Shariatpur</option>
+                        <option value="Sherpur">Sherpur</option>
+                        <option value="Sirajganj">Sirajganj</option>
+                        <option value="Sunamganj">Sunamganj</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Tangail">Tangail</option>
+                        <option value="Thakurgaon">Thakurgaon</option>
+                      </select>
+                      <label class="form-label" for="trCourtName">District</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form8Example1" class="form-control-file" />
+                      <label class="form-label" for="form8Example1">Thana Name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-outline">
+                          <input type="text" id="acCourtId" class="form-control-file" />
+                          <label class="form-label" for="acCourtId">Court ID</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <select type="dropdown" id="acCourtType" class="form-control-file">
+                                <option value="Civil Court">Civil Court</option>
+                                <option value="Criminal Court">Criminal Court</option>
+                                <option value="Jurisdiction of the Appellate Division">Jurisdiction of the Appellate Division</option>
+                                <option value="Jurisdiction of the High Court Division">Jurisdiction of the High Court Division</option>
+                                <option value="Tribunals and Special Court">Tribunals and Special Court</option>
+                                <option value="The International Crimes Tribunal">The International Crimes Tribunal</option>
+                                <option value="Jurisdiction of Criminal Court">Jurisdiction of Criminal Court</option>
+                            </select>
+                            <label class="form-label" for="acCourtType">Court Type</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                          <input type="text" id="acCourtNo" class="form-control-file" />
+                          <label class="form-label" for="acCourtNo">Court No.</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                          <select type="dropdown" id="acTribunalName" class="form-control-file">
+                              <option value="N/A">N/A</option>
+                              <option value="International Crime Tribunal">International Crime Tribunal</option>
+                              <option value="Administratibe Appellate Tribunal">Administratibe Appellate Tribunal</option>
+                              <option value="Labour Appellate Tribunal">Labour Appellate Tribunal</option>
+                              <option value="Cyber Tribunal">Cyber Tribunal</option>
+                              <option value="Custom Excise and VAT Appellate Tribunal">Custom Excise and VAT Appellate Tribunal</option>
+                              <option value="Taxes Appellate Tribunal">Taxes Appellate Tribunal</option>
+                              <option value="Court of Settlement">Court of Settlement</option>
+                              <option value="Special Tribunal Securities and Exchange Commission">Special Tribunal Securities and Exchange Commission</option>
+                          </select>
+                          <label class="form-label" for="acTribunalName">Tribunal Name</label>
+                        </div>
+                    </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="date" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Date From</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="date" id="form8Example2" class="form-control-file" />
+                      <label class="form-label" for="form8Example2">Date To</label>
+                    </div>
+                  </div>
+                </div>
+                <br>
+  
+                <div class="container" style="width: 10%;">
+                <div class="row" >
+                  <div class="col" >
+                    <!-- Name input -->
+                    <div class="form-outline">
+                      <button type="submit" class="btn btn-warning">Search</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div class="container-fluid" >
+          <br>
+            <table border="2" class="table table-stripped">
+              <thead>
+                <th>Actions</th>
+                <th>GR No.</th>
+                <th>FIR No.</th>
+                <th>District</th>
+                <th>Thana Name</th>
+                <th>Case Type</th>
+                <th>Penal Code</th>
+                <th>Penal Section</th>
+                <th>Date of Case Issued</th>
+                <th>Name of Accussed</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Address</th>
+                <th>Contact No.</th>
+                <th>Date of Arrest</th>
+                <th>Date of Senting Court</th>
+                <th>Court Name</th>
+                <th>Court City</th>
+              </thead>
+              <tbody>
+                <td>
+                    <a>GR</a>
+                    <a>Warrent</a><br>
+                    <a>Arrest</a>
+                    <a>Bailbond</a><br>
+                    <a>Verdict</a>
+                    <a>Report</a>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tbody>
+            </table>
+        </div> -->
+  
+      </form>
+    </div>
+  </div>
+  
+  
+
