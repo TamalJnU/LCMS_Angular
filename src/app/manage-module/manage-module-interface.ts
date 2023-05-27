@@ -1,4 +1,4 @@
-export interface addPoliceInterface{
+export interface IAddPolice{
   apPoliceId : string,
   apFirstName : string,
   apLastName : string,
@@ -23,4 +23,166 @@ export interface addPoliceInterface{
   apPassword : string,
   apConfirmPassword : string
 }
+
+export interface IAddJudge{
+  ajJudgeId : string,
+  ajFirstName : string,
+  ajLastName : string,
+  ajFatherName : string,
+  ajMotherName : string,
+  ajGender : string,
+  ajDoB : string,
+  ajCourtId : string,
+  ajCourtType :string,
+  ajCourtCity :string,
+  ajCourtName :string,
+  ajCourtNo :string,
+  ajTribunalName :string,
+  ajChiefJustice :string,
+  ajChiefJusticeId :string,
+  ajPlacementDate :string,
+  ajEmail :string,
+  ajOfficePhone :string,
+  ajPersonalPhone :string,
+  ajPresentAddress :string,
+  ajPermanentAddress :string,
+  ajUserName :string,
+  ajPassword :string,
+  ajConfirmPassword :string
+}
+
+export interface IAddPp{
+  appPpId : string,
+  appFirstName : string,
+  appLastName : string,
+  appFatherName : string,
+  appMotherName : string,
+  appGender : string,
+  appDoB : string,
+  appCourtId : string,
+  appCourtType :string,
+  appCourtCity :string,
+  appCourtName :string,
+  appCourtNo :string,
+  appTribunalName :string,
+  appChiefJustice :string,
+  appChiefJusticeId :string,
+  appPlacementDate :string,
+  appEmail :string,
+  appOfficePhone :string,
+  appPersonalPhone :string,
+  appPresentAddress :string,
+  appPermanentAddress :string,
+  appUserName :string,
+  appPassword :string,
+  appConfirmPassword :string
+}
+
+export interface IAddOperator{
+  aoOperatorId : string,
+  aoOperatorOf : string,
+  aoBpCourtId : string,
+  aoFirstName : string,
+  aoLastName : string,
+  aoFatherName : string,
+  aoMotherName : string,
+  aoGender : string,
+  aoDoB : string,
+  aoDepartmentId :string,
+  aoDepartmentType :string,
+  aoDistrictName :string,
+  aoThanaName :string,
+  aoBatch :string,
+  aoRank :string,
+  aoPlacementDate :string,
+  aoWeaponSerial :string,
+  aoPresentAddress :string,
+  aoPermanentAddress :string,
+  aoEmail :string,
+  aoOfficePhone :string,
+  aoPersonalPhone :string,
+  aoUserName :string,
+  aoPassword :string,
+  aoConfirmPassword :string
+}
+
+export interface IAddJailer{
+  ajailerJailerId : string,
+  ajailerFirstName : string,
+  ajailerLastName : string,
+  ajailerFatherName : string,
+  ajailerMotherName : string,
+  ajailerGender : string,
+  ajailerDoB : string,
+  ajailerJailId : string,
+  ajailerPoliceId :string,
+  ajailerJailType :string,
+  ajailerJailCity :string,
+  ajailerJailName :string,
+  ajailerPlacementDate :string,
+  ajailerEmail :string,
+  ajailerOfficePhone :string,
+  ajailerPersonalPhone :string,
+  ajailerPresentAddress :string,
+  ajailerPermanentAddress :string,
+  ajailerUserName :string,
+  ajailerPassword :string,
+  ajailerConfirmPassword :string
+}
+
+export interface IAddJail{
+  ajailJailId : string,
+  ajailJailName : string,
+  ajailJailType : string,
+  ajailJailCity : string,
+  ajailJailSuperName : string,
+  ajailJailSuperPoliceId : string,
+  ajailJailEmail : string,
+  ajailOfficePhone : string,
+  ajailJailSuperPhone :string,
+  ajailUserName :string,
+  ajailPassword :string,
+  ajailConfirmPassword :string
+}
+
+export interface IAddCourt{
+  acCourtId : string,
+  acCourtType : string,
+  acCourtCity : string,
+  acCourtName : string,
+  acCourtNo : string,
+  acTribunalName : string,
+  acChiefJustice : string,
+  acChiefJusticeId : string,
+  acPublicProsecutor :string,
+  acPublicProsecutorId :string,
+  acEmail :string,
+  acCourtPhone :string,
+  acUserName :string,
+  acPassword :string,
+  acConfirmPassword :string
+}
+
+export interface IAddCommunityPolice{
+  acpCommunityPoliceId : string,
+  acpFirstName : string,
+  acpLastName : string,
+  acpFatherName : string,
+  acpMotherName : string,
+  acpGender : string,
+  acpDoB : string,
+  acpDistrictName : string,
+  acpThanaName :string,
+  acpStartDate :string,
+  acpEndDate :string,
+  acpTrainingDate :string,
+  acpMobile :string,
+  acpEmail :string,
+  acpFacebookId :string,
+  acpPhoto :string,
+  acpUserName :string,
+  acpPassword :string,
+  acpConfirmPassword :string
+}
+
 

@@ -12,6 +12,7 @@ import { JailInformationComponent } from './jail-information/jail-information.co
 import { NoticeBoardComponent } from './notice-board/notice-board.component';
 import { JailerInformationComponent } from './jailer-information/jailer-information.component';
 import { PpInformationComponent } from './pp-information/pp-information.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,9 @@ import { PpInformationComponent } from './pp-information/pp-information.componen
   ],
   imports: [
     CommonModule,
-    GeneralMenuModuleRoutingModule
+    GeneralMenuModuleRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class GeneralMenuModuleModule { }

@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-  <form>
+  <form (ngSubmit)="submit()">
     <br>
     <a href="#" routerLink="/general/jail-information" ><button class="btn btn-secondary">Back to List</button></a>
     <br>
@@ -8,19 +8,19 @@
     <div class="row">
       <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailJailId" class="form-control-file" />
+            <input type="text" id="ajailJailId" class="form-control-file" formControlName="ajailJailId"/>
             <label class="form-label" for="ajailJailId">Jail ID</label>
           </div>
       </div>
       <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailJailName" class="form-control-file" />
+            <input type="text" id="ajailJailName" class="form-control-file" formControlName="ajailJailName"/>
             <label class="form-label" for="ajailJailName">Jail Name</label>
           </div>
       </div>
       <div class="col">
           <div class="form-outline">
-              <select type="dropdown" id="ajailJailType" class="form-control-file">
+              <select type="dropdown" id="ajailJailType" class="form-control-file" formControlName="ajailJailType">
                   <option value="Central Jail">Central Jail</option>
                   <option value="District Jail">District Jail</option>
                   <option value="Special Jail">Special Jail</option>
@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col">
         <div class="form-outline">
-          <select type="dropdown" id="ajailJailCity" class="form-control-file">
+          <select type="dropdown" id="ajailJailCity" class="form-control-file" formControlName="ajailJailCity">
             <option value="Bagerhat">Bagerhat</option>
             <option value="Bandarban">Bandarban</option>
             <option value="Barguna">Barguna</option>
@@ -104,13 +104,13 @@
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="ajailJailSuperName" class="form-control-file" />
+          <input type="text" id="ajailJailSuperName" class="form-control-file" formControlName="ajailJailSuperName"/>
           <label class="form-label" for="ajailJailSuperName">Jail Super Name</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="ajailJailSuperPoliceId" class="form-control-file" />
+          <input type="text" id="ajailJailSuperPoliceId" class="form-control-file" formControlName="ajailJailSuperPoliceId"/>
           <label class="form-label" for="ajailJailSuperPoliceId">Jail Super Police ID</label>
         </div>
       </div>
@@ -119,19 +119,19 @@
     <div class="row">
       <div class="col">
           <div class="form-outline">
-            <input type="email" id="ajailJailEmail" class="form-control-file" />
+            <input type="email" id="ajailJailEmail" class="form-control-file" formControlName="ajailJailEmail"/>
             <label class="form-label" for="ajailJailEmail">Jail Email</label>
           </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="ajailOfficePhone" class="form-control-file" />
+          <input type="text" id="ajailOfficePhone" class="form-control-file" formControlName="ajailOfficePhone"/>
           <label class="form-label" for="ajailOfficePhone">Office Phone</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="ajailJailSuperPhone" class="form-control-file" />
+          <input type="text" id="ajailJailSuperPhone" class="form-control-file" formControlName="ajailJailSuperPhone"/>
           <label class="form-label" for="ajailJailSuperPhone">Jail Super Phone</label>
         </div>
       </div>
@@ -140,19 +140,19 @@
     <div class="row">
       <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailUserName" class="form-control-file" />
+            <input type="text" id="ajailUserName" class="form-control-file" formControlName="ajailUserName"/>
             <label class="form-label" for="ajailUserName">User Name</label>
           </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="password" id="ajailPassword" class="form-control-file" />
+          <input type="password" id="ajailPassword" class="form-control-file" formControlName="ajailPassword"/>
           <label class="form-label" for="ajailPassword">Password</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="password" id="ajailConfirmPassword" class="form-control-file" />
+          <input type="password" id="ajailConfirmPassword" class="form-control-file" formControlName="ajailConfirmPassword"/>
           <label class="form-label" for="ajailConfirmPassword">Confirm Password</label>
         </div>
       </div>

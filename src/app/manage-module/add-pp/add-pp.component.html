@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-    <form>
+    <form (ngSubmit)="submit()">
       <br>
       <a href="#" routerLink="/general/pp-information" ><button class="btn btn-secondary">Back to List</button></a>
       <br>
@@ -8,19 +8,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appPpId" class="form-control-file" />
+            <input type="text" id="appPpId" class="form-control-file" formControlName="appPpId"/>
             <label class="form-label" for="appPpId">Public Prosecutor ID</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appFirstName" class="form-control-file" />
+            <input type="text" id="appFirstName" class="form-control-file" formControlName="appFirstName"/>
             <label class="form-label" for="appFirstName">First Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="appLastName" class="form-control-file" />
+            <input type="text" id="appLastName" class="form-control-file" formControlName="appLastName"/>
             <label class="form-label" for="appLastName">Last Name</label>
           </div>
         </div>
@@ -29,19 +29,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appFatherName" class="form-control-file" />
+            <input type="text" id="appFatherName" class="form-control-file" formControlName="appFatherName"/>
             <label class="form-label" for="appFatherName">Father's Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="appMotherName" class="form-control-file" />
+            <input type="text" id="appMotherName" class="form-control-file" formControlName="appMotherName"/>
             <label class="form-label" for="appMotherName">Mothers's Name</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="appGender" class="form-control-file" name="gender">
+            <select type="dropdown" id="appGender" class="form-control-file" name="gender" formControlName="appGender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
@@ -50,7 +50,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="appDoB" class="form-control-file" />
+            <input type="date" id="appDoB" class="form-control-file" formControlName="appDoB"/>
             <label class="form-label" for="appDoB">Date of Birth</label>
           </div>
         </div>
@@ -59,13 +59,13 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="appCourtId" class="form-control-file" />
+              <input type="text" id="appCourtId" class="form-control-file" formControlName="appCourtId"/>
               <label class="form-label" for="appCourtId">Court ID</label>
             </div>
         </div>
         <div class="col">
             <div class="form-outline">
-                <select type="dropdown" id="appCourtType" class="form-control-file">
+                <select type="dropdown" id="appCourtType" class="form-control-file" formControlName="appCourtType">
                     <option value="Civil Court">Civil Court</option>
                     <option value="Criminal Court">Criminal Court</option>
                     <option value="Jurisdiction of the Appellate Division">Jurisdiction of the Appellate Division</option>
@@ -82,7 +82,7 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="appCourtCity" class="form-control-file">
+            <select type="dropdown" id="appCourtCity" class="form-control-file" formControlName="appCourtCity">
               <option value="Bagerhat">Bagerhat</option>
               <option value="Bandarban">Bandarban</option>
               <option value="Barguna">Barguna</option>
@@ -153,7 +153,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="appCourtName" class="form-control-file">
+            <select type="dropdown" id="appCourtName" class="form-control-file" formControlName="appCourtName">
                 <option value="District Judge Court">District Judge Court</option>
                 <option value="Additional District Judge Court">Additional District Judge Court</option>
                 <option value="Joint District Judge Court">Joint District Judge Court</option>
@@ -174,13 +174,13 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appCourtNo" class="form-control-file" />
+            <input type="text" id="appCourtNo" class="form-control-file" formControlName="appCourtNo"/>
             <label class="form-label" for="appCourtNo">Court No.</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="appTribunalName" class="form-control-file">
+            <select type="dropdown" id="appTribunalName" class="form-control-file" formControlName="appTribunalName">
                 <option value="N/A">N/A</option>
                 <option value="International Crime Tribunal">International Crime Tribunal</option>
                 <option value="Administratibe Appellate Tribunal">Administratibe Appellate Tribunal</option>
@@ -196,13 +196,13 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appChiefJustice" class="form-control-file" />
+            <input type="text" id="appChiefJustice" class="form-control-file" formControlName="appChiefJustice"/>
             <label class="form-label" for="appChiefJustice">Chief Justice</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appChiefJusticeId" class="form-control-file" />
+            <input type="text" id="appChiefJusticeId" class="form-control-file" formControlName="appChiefJusticeId"/>
             <label class="form-label" for="appChiefJusticeId">Chief Justice ID</label>
           </div>
         </div>
@@ -211,25 +211,25 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="appPlacementDate" class="form-control-file" />
+            <input type="date" id="appPlacementDate" class="form-control-file" formControlName="appPlacementDate"/>
             <label class="form-label" for="appPlacementDate">Placement Date</label>
           </div>
         </div>
         <div class="col">
             <div class="form-outline">
-              <input type="email" id="appEmail" class="form-control-file" />
+              <input type="email" id="appEmail" class="form-control-file" formControlName="appEmail"/>
               <label class="form-label" for="appEmail">Email</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appOfficePhone" class="form-control-file" />
+            <input type="text" id="appOfficePhone" class="form-control-file" formControlName="appOfficePhone"/>
             <label class="form-label" for="appOfficePhone">Office Phone</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="appPersonalPhone" class="form-control-file" />
+            <input type="text" id="appPersonalPhone" class="form-control-file" formControlName="appPersonalPhone"/>
             <label class="form-label" for="appPersonalPhone">Personal Phone</label>
           </div>
         </div>
@@ -238,13 +238,13 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <textarea name="" id="appPresentAddress" class="form-control-file" ></textarea>
+              <textarea name="" id="appPresentAddress" class="form-control-file" formControlName="appPresentAddress"></textarea>
               <label class="form-label" for="appPresentAddress">Present Address</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <textarea name="" id="appPermanentAddress" class="form-control-file" ></textarea>
+            <textarea name="" id="appPermanentAddress" class="form-control-file" formControlName="appPermanentAddress"></textarea>
             <label class="form-label" for="appPermanentAddress">Permanent Address</label>
           </div>
         </div>
@@ -253,19 +253,19 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="appUserName" class="form-control-file" />
+              <input type="text" id="appUserName" class="form-control-file" formControlName="appUserName"/>
               <label class="form-label" for="appUserName">User Name</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="appPassword" class="form-control-file" />
+            <input type="password" id="appPassword" class="form-control-file" formControlName="appPassword"/>
             <label class="form-label" for="appPassword">Password</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="appConfirmPassword" class="form-control-file" />
+            <input type="password" id="appConfirmPassword" class="form-control-file" formControlName="appConfirmPassword"/>
             <label class="form-label" for="appConfirmPassword">Confirm Password</label>
           </div>
         </div>

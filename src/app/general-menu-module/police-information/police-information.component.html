@@ -43,33 +43,35 @@
             <th>Actions</th>
           </thead>
           <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr **ngFor="let v of policeList">
+            <td>{{v.apPoliceId}}</td>
+            <td>{{v.apFirstName}}</td>
+            <td>{{v.apLastName}}</td>
+            <td>{{v.apFatherName}}</td>
+            <td>{{v.apMotherName}}</td>
+            <td>{{v.apGender}}</td>
+            <td>{{v.apDoB}}</td>
+            <td>{{v.apDepartmentId}}</td>
+            <td>{{v.apDepartmentType}}</td>
+            <td>{{v.apDistrictName}}</td>
+            <td>{{v.apThanaName}}</td>
+            <td>{{v.apBatch}}</td>
+            <td>{{v.apRank}}</td>
+            <td>{{v.apPlacementDate}}</td>
+            <td>{{v.apWeaponSerial}}</td>
+            <td>{{v.apPresentAddress}}</td>
+            <td>{{v.apPermanentAddress}}</td>
+            <td>{{v.apEmail}}</td>
+            <td>{{v.apOfficePhone}}</td>
+            <td>{{v.apPersonalPhone}}</td>
+            <td>{{v.apUserName}}</td>
+            <td>{{v.apPassword}}</td>
+            <td>{{v.apConfirmPassword}}</td>
             <td>
                 <button class="btn btn-success">View</button>
                 <button class="btn btn-warning">Edit</button>
             </td>
+          </tr>
           </tbody>
         </table>
     </div>

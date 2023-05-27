@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-    <form>
+    <form (ngSubmit)="submit()">
       <br>
       <a href="#" routerLink="/general/judge-information" ><button class="btn btn-secondary">Back to List</button></a>
       <br>
@@ -8,19 +8,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajJudgeId" class="form-control-file" />
+            <input type="text" id="ajJudgeId" class="form-control-file" formControlName="ajJudgeId"/>
             <label class="form-label" for="ajJudgeId">Judge ID</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajFirstName" class="form-control-file" />
+            <input type="text" id="ajFirstName" class="form-control-file" formControlName="ajFirstName"/>
             <label class="form-label" for="ajFirstName">First Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="ajLastName" class="form-control-file" />
+            <input type="text" id="ajLastName" class="form-control-file" formControlName="ajLastName"/>
             <label class="form-label" for="ajLastName">Last Name</label>
           </div>
         </div>
@@ -29,19 +29,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajFatherName" class="form-control-file" />
+            <input type="text" id="ajFatherName" class="form-control-file" formControlName="ajFatherName"/>
             <label class="form-label" for="ajFatherName">Father's Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="ajMotherName" class="form-control-file" />
+            <input type="text" id="ajMotherName" class="form-control-file" formControlName="ajMotherName"/>
             <label class="form-label" for="ajMotherName">Mothers's Name</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="ajGender" class="form-control-file" name="gender">
+            <select type="dropdown" id="ajGender" class="form-control-file" name="gender" formControlName="ajGender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
@@ -50,7 +50,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="ajDoB" class="form-control-file" />
+            <input type="date" id="ajDoB" class="form-control-file" formControlName="ajDoB"/>
             <label class="form-label" for="ajDoB">Date of Birth</label>
           </div>
         </div>
@@ -59,13 +59,13 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="ajCourtId" class="form-control-file" />
+              <input type="text" id="ajCourtId" class="form-control-file" formControlName="ajCourtId"/>
               <label class="form-label" for="ajCourtId">Court ID</label>
             </div>
         </div>
         <div class="col">
             <div class="form-outline">
-                <select type="dropdown" id="ajCourtType" class="form-control-file">
+                <select type="dropdown" id="ajCourtType" class="form-control-file" formControlName="ajCourtType">
                     <option value="Civil Court">Civil Court</option>
                     <option value="Criminal Court">Criminal Court</option>
                     <option value="Jurisdiction of the Appellate Division">Jurisdiction of the Appellate Division</option>
@@ -82,7 +82,7 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="ajCourtCity" class="form-control-file">
+            <select type="dropdown" id="ajCourtCity" class="form-control-file" formControlName="ajCourtCity">
               <option value="Bagerhat">Bagerhat</option>
               <option value="Bandarban">Bandarban</option>
               <option value="Barguna">Barguna</option>
@@ -153,7 +153,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="ajCourtName" class="form-control-file">
+            <select type="dropdown" id="ajCourtName" class="form-control-file" formControlName="ajCourtName">
                 <option value="District Judge Court">District Judge Court</option>
                 <option value="Additional District Judge Court">Additional District Judge Court</option>
                 <option value="Joint District Judge Court">Joint District Judge Court</option>
@@ -174,13 +174,13 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajCourtNo" class="form-control-file" />
+            <input type="text" id="ajCourtNo" class="form-control-file" formControlName="ajCourtNo"/>
             <label class="form-label" for="ajCourtNo">Court No.</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="ajTribunalName" class="form-control-file">
+            <select type="dropdown" id="ajTribunalName" class="form-control-file" formControlName="ajTribunalName">
                 <option value="N/A">N/A</option>
                 <option value="International Crime Tribunal">International Crime Tribunal</option>
                 <option value="Administratibe Appellate Tribunal">Administratibe Appellate Tribunal</option>
@@ -196,13 +196,13 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajChiefJustice" class="form-control-file" />
+            <input type="text" id="ajChiefJustice" class="form-control-file" formControlName="ajChiefJustice"/>
             <label class="form-label" for="ajChiefJustice">Chief Justice</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajChiefJusticeId" class="form-control-file" />
+            <input type="text" id="ajChiefJusticeId" class="form-control-file" formControlName="ajChiefJusticeId"/>
             <label class="form-label" for="ajChiefJusticeId">Chief Justice ID</label>
           </div>
         </div>
@@ -211,25 +211,25 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="ajPlacementDate" class="form-control-file" />
+            <input type="date" id="ajPlacementDate" class="form-control-file" formControlName="ajPlacementDate"/>
             <label class="form-label" for="ajPlacementDate">Placement Date</label>
           </div>
         </div>
         <div class="col">
             <div class="form-outline">
-              <input type="email" id="ajEmail" class="form-control-file" />
+              <input type="email" id="ajEmail" class="form-control-file" formControlName="ajEmail"/>
               <label class="form-label" for="ajEmail">Email</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajOfficePhone" class="form-control-file" />
+            <input type="text" id="ajOfficePhone" class="form-control-file" formControlName="ajOfficePhone"/>
             <label class="form-label" for="ajOfficePhone">Office Phone</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajPersonalPhone" class="form-control-file" />
+            <input type="text" id="ajPersonalPhone" class="form-control-file" formControlName="ajPersonalPhone"/>
             <label class="form-label" for="ajPersonalPhone">Personal Phone</label>
           </div>
         </div>
@@ -238,13 +238,13 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <textarea name="" id="ajPresentAddress" class="form-control-file" ></textarea>
+              <textarea name="" id="ajPresentAddress" class="form-control-file" formControlName="ajPresentAddress"></textarea>
               <label class="form-label" for="ajPresentAddress">Present Address</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <textarea name="" id="ajPermanentAddress" class="form-control-file" ></textarea>
+            <textarea name="" id="ajPermanentAddress" class="form-control-file" formControlName="ajPermanentAddress"></textarea>
             <label class="form-label" for="ajPermanentAddress">Permanent Address</label>
           </div>
         </div>
@@ -253,19 +253,19 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="ajUserName" class="form-control-file" />
+              <input type="text" id="ajUserName" class="form-control-file" formControlName="ajUserName"/>
               <label class="form-label" for="ajUserName">User Name</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="ajPassword" class="form-control-file" />
+            <input type="password" id="ajPassword" class="form-control-file" formControlName="ajPassword"/>
             <label class="form-label" for="ajPassword">Password</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="ajConfirmPassword" class="form-control-file" />
+            <input type="password" id="ajConfirmPassword" class="form-control-file" formControlName="ajConfirmPassword"/>
             <label class="form-label" for="ajConfirmPassword">Confirm Password</label>
           </div>
         </div>

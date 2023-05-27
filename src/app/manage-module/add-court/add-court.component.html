@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-  <form>
+  <form (ngSubmit)="submit()">
     <br>
     <a href="#" routerLink="/general/court-information" ><button class="btn btn-secondary">Back to List</button></a>
     <br>
@@ -8,13 +8,13 @@
     <div class="row">
       <div class="col">
           <div class="form-outline">
-            <input type="text" id="acCourtId" class="form-control-file" />
+            <input type="text" id="acCourtId" class="form-control-file" formControlName="acCourtId"/>
             <label class="form-label" for="acCourtId">Court ID</label>
           </div>
       </div>
       <div class="col">
           <div class="form-outline">
-              <select type="dropdown" id="acCourtType" class="form-control-file">
+              <select type="dropdown" id="acCourtType" class="form-control-file" formControlName="acCourtType">
                   <option value="Civil Court">Civil Court</option>
                   <option value="Criminal Court">Criminal Court</option>
                   <option value="Jurisdiction of the Appellate Division">Jurisdiction of the Appellate Division</option>
@@ -31,7 +31,7 @@
     <div class="row">
       <div class="col">
         <div class="form-outline">
-          <select type="dropdown" id="acCourtCity" class="form-control-file">
+          <select type="dropdown" id="acCourtCity" class="form-control-file" formControlName="acCourtCity">
             <option value="Bagerhat">Bagerhat</option>
             <option value="Bandarban">Bandarban</option>
             <option value="Barguna">Barguna</option>
@@ -102,7 +102,7 @@
       </div>
       <div class="col">
         <div class="form-outline">
-          <select type="dropdown" id="acCourtName" class="form-control-file">
+          <select type="dropdown" id="acCourtName" class="form-control-file" formControlName="acCourtName">
               <option value="District Judge Court">District Judge Court</option>
               <option value="Additional District Judge Court">Additional District Judge Court</option>
               <option value="Joint District Judge Court">Joint District Judge Court</option>
@@ -123,13 +123,13 @@
     <div class="row">
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="acCourtNo" class="form-control-file" />
+          <input type="text" id="acCourtNo" class="form-control-file" formControlName="acCourtNo"/>
           <label class="form-label" for="acCourtNo">Court No.</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <select type="dropdown" id="acTribunalName" class="form-control-file">
+          <select type="dropdown" id="acTribunalName" class="form-control-file" formControlName="acTribunalName">
               <option value="N/A">N/A</option>
               <option value="International Crime Tribunal">International Crime Tribunal</option>
               <option value="Administratibe Appellate Tribunal">Administratibe Appellate Tribunal</option>
@@ -145,13 +145,13 @@
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="acChiefJustice" class="form-control-file" />
+          <input type="text" id="acChiefJustice" class="form-control-file" formControlName="acChiefJustice"/>
           <label class="form-label" for="acChiefJustice">Chief Justice</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="acChiefJusticeId" class="form-control-file" />
+          <input type="text" id="acChiefJusticeId" class="form-control-file" formControlName="acChiefJusticeId"/>
           <label class="form-label" for="acChiefJusticeId">Chief Justice ID</label>
         </div>
       </div>
@@ -160,25 +160,25 @@
     <div class="row">
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="acPublicProsecutor" class="form-control-file" />
+          <input type="text" id="acPublicProsecutor" class="form-control-file" formControlName="acPublicProsecutor"/>
           <label class="form-label" for="acPublicProsecutor">Public Prosecutor</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="acPublicProsecutorId" class="form-control-file" />
+          <input type="text" id="acPublicProsecutorId" class="form-control-file" formControlName="acPublicProsecutorId"/>
           <label class="form-label" for="acPublicProsecutorId">Public Prosecutor ID</label>
         </div>
       </div>
       <div class="col">
           <div class="form-outline">
-            <input type="email" id="acEmail" class="form-control-file" />
+            <input type="email" id="acEmail" class="form-control-file" formControlName="acEmail"/>
             <label class="form-label" for="acEmail">Court Email</label>
           </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="text" id="acCourtPhone" class="form-control-file" />
+          <input type="text" id="acCourtPhone" class="form-control-file" formControlName="acCourtPhone"/>
           <label class="form-label" for="acCourtPhone">Court Phone</label>
         </div>
       </div>
@@ -187,19 +187,19 @@
     <div class="row">
       <div class="col">
           <div class="form-outline">
-            <input type="text" id="acUserName" class="form-control-file" />
+            <input type="text" id="acUserName" class="form-control-file" formControlName="acUserName"/>
             <label class="form-label" for="apUserName">User Name</label>
           </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="password" id="acPassword" class="form-control-file" />
+          <input type="password" id="acPassword" class="form-control-file" formControlName="acPassword"/>
           <label class="form-label" for="apPassword">Password</label>
         </div>
       </div>
       <div class="col">
         <div class="form-outline">
-          <input type="password" id="acConfirmPassword" class="form-control-file" />
+          <input type="password" id="acConfirmPassword" class="form-control-file" formControlName="acConfirmPassword"/>
           <label class="form-label" for="apConfirmPassword">Confirm Password</label>
         </div>
       </div>

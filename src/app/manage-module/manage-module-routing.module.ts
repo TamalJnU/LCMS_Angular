@@ -23,7 +23,9 @@ const routes: Routes = [
   { path : 'manage-system-log', component : ManageSystemLogComponent },
   { path : 'send-email', component : SendEmailComponent },
   { path : 'setting', component : SettingComponent },
-  { path : 'community-police-form', component : CommunityPoliceFormComponent }
+  { path : 'community-police-form', component : CommunityPoliceFormComponent },
+  { path : '**', component : AddPoliceComponent }
+
 ];
 
 @NgModule({

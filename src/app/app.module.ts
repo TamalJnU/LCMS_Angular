@@ -7,20 +7,26 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
 import { SidebarComponentComponent } from './sidebar-component/sidebar-component.component';
 import { AddPoliceComponent } from './manage-module/add-police/add-police.component';
+import { ManageModuleModule } from './manage-module/manage-module.module';
+import { HomeModuleModule } from './home-module/home-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponentComponent,
     SidebarComponentComponent,
-    FooterComponentComponent
+    FooterComponentComponent,
+    
     // Other component declarations...
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
-    ReactiveFormsModule, // Add ReactiveFormsModule here
+    ManageModuleModule,
+    HomeModuleModule,
+     // Add ReactiveFormsModule here
     // Other module imports...
   ],
   providers: [],

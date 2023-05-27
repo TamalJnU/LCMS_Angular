@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-    <form>
+    <form (ngSubmit)="submit()">
       <br>
       <a href="#" routerLink="/general/jailer-information" ><button class="btn btn-secondary">Back to List</button></a>
       <br>
@@ -8,19 +8,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerJailerId" class="form-control-file" />
+            <input type="text" id="ajailerJailerId" class="form-control-file" formControlName="ajailerJailerId"/>
             <label class="form-label" for="ajailerJailerId">Jailer ID</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerFirstName" class="form-control-file" />
+            <input type="text" id="ajailerFirstName" class="form-control-file" formControlName="ajailerFirstName"/>
             <label class="form-label" for="ajailerFirstName">First Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="ajailerLastName" class="form-control-file" />
+            <input type="text" id="ajailerLastName" class="form-control-file" formControlName="ajailerLastName"/>
             <label class="form-label" for="ajailerLastName">Last Name</label>
           </div>
         </div>
@@ -29,19 +29,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerFatherName" class="form-control-file" />
+            <input type="text" id="ajailerFatherName" class="form-control-file" formControlName="ajailerFatherName"/>
             <label class="form-label" for="ajailerFatherName">Father's Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="ajailerMotherName" class="form-control-file" />
+            <input type="text" id="ajailerMotherName" class="form-control-file" formControlName="ajailerMotherName"/>
             <label class="form-label" for="ajailerMotherName">Mothers's Name</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="ajailerGender" class="form-control-file" name="gender">
+            <select type="dropdown" id="ajailerGender" class="form-control-file" name="gender" formControlName="ajailerGender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
@@ -49,7 +49,7 @@
           </div>
           <div class="col">
             <div class="form-outline">
-              <input type="date" id="ajailerDoB" class="form-control-file" />
+              <input type="date" id="ajailerDoB" class="form-control-file" formControlName="ajailerDoB"/>
               <label class="form-label" for="ajailerDoB">Date of Birth</label>
             </div>
           </div>
@@ -59,19 +59,19 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="ajailerJailId" class="form-control-file" />
+              <input type="text" id="ajailerJailId" class="form-control-file" formControlName="ajailerJailId"/>
               <label class="form-label" for="ajailerJailId">Jail ID</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerPoliceId" class="form-control-file" />
+            <input type="text" id="ajailerPoliceId" class="form-control-file" formControlName="ajailerPoliceId"/>
             <label class="form-label" for="ajailerPoliceId">Police ID</label>
           </div>
       </div>
         <div class="col">
             <div class="form-outline">
-                <select type="dropdown" id="ajailerJailType" class="form-control-file">
+                <select type="dropdown" id="ajailerJailType" class="form-control-file" formControlName="ajailerJailType">
                     <option value="Central Jail">Central Jail</option>
                     <option value="District Jail">District Jail</option>
                     <option value="Special Jail">Special Jail</option>
@@ -84,7 +84,7 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="ajailerJailCity" class="form-control-file">
+            <select type="dropdown" id="ajailerJailCity" class="form-control-file" formControlName="ajailerJailCity">
               <option value="Bagerhat">Bagerhat</option>
               <option value="Bandarban">Bandarban</option>
               <option value="Barguna">Barguna</option>
@@ -155,7 +155,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerJailName" class="form-control-file" />
+            <input type="text" id="ajailerJailName" class="form-control-file" formControlName="ajailerJailName"/>
             <label class="form-label" for="ajailerJailName">Jail Name</label>
           </div>
         </div>
@@ -164,25 +164,25 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="ajailerPlacementDate" class="form-control-file" />
+            <input type="date" id="ajailerPlacementDate" class="form-control-file" formControlName="ajailerPlacementDate"/>
             <label class="form-label" for="ajailerPlacementDate">Placement Date</label>
           </div>
         </div>
         <div class="col">
             <div class="form-outline">
-              <input type="email" id="ajailerEmail" class="form-control-file" />
+              <input type="email" id="ajailerEmail" class="form-control-file" formControlName="ajailerEmail"/>
               <label class="form-label" for="ajailerEmail">Email</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerOfficePhone" class="form-control-file" />
+            <input type="text" id="ajailerOfficePhone" class="form-control-file" formControlName="ajailerOfficePhone"/>
             <label class="form-label" for="ajailerOfficePhone">Office Phone</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="ajailerPersonalPhone" class="form-control-file" />
+            <input type="text" id="ajailerPersonalPhone" class="form-control-file" formControlName="ajailerPersonalPhone"/>
             <label class="form-label" for="ajailerPersonalPhone">Personal Phone</label>
           </div>
         </div>
@@ -191,13 +191,13 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <textarea name="" id="ajailerPresentAddress" class="form-control-file" ></textarea>
+              <textarea name="" id="ajailerPresentAddress" class="form-control-file" formControlName="ajailerPresentAddress"></textarea>
               <label class="form-label" for="ajailerPresentAddress">Present Address</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <textarea name="" id="ajailerPermanentAddress" class="form-control-file" ></textarea>
+            <textarea name="" id="ajailerPermanentAddress" class="form-control-file" formControlName="ajailerPermanentAddress"></textarea>
             <label class="form-label" for="ajailerPermanentAddress">Permanent Address</label>
           </div>
         </div>
@@ -206,19 +206,19 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="ajailerUserName" class="form-control-file" />
+              <input type="text" id="ajailerUserName" class="form-control-file" formControlName="ajailerUserName"/>
               <label class="form-label" for="ajailerUserName">User Name</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="ajailerPassword" class="form-control-file" />
+            <input type="password" id="ajailerPassword" class="form-control-file" formControlName="ajailerPassword"/>
             <label class="form-label" for="ajailerPassword">Password</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="ajailerConfirmPassword" class="form-control-file" />
+            <input type="password" id="ajailerConfirmPassword" class="form-control-file" formControlName="ajailerConfirmPassword"/>
             <label class="form-label" for="ajailerConfirmPassword">Confirm Password</label>
           </div>
         </div>

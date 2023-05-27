@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-    <form>
+    <form  (ngSubmit)="submit()">
       <br>
       <a href="#" routerLink="/general/police-information" ><button class="btn btn-secondary">Back to List</button></a>
       <br>
@@ -9,29 +9,35 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="apGender" class="form-control-file" name="gender">
+            <input type="text" id="aoOperatorId" class="form-control-file" formControlName="aoOperatorId"/>
+            <label class="form-label" for="aoBpCourtId">Operator ID</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select type="dropdown" id="aoOperatorOf" class="form-control-file" name="gender" formControlName="aoOperatorOf">
               <option value="Thana">Thana</option>
               <option value="Court">Court</option>
             </select>
-            <label class="form-label" for="apGender">Operator of</label>
+            <label class="form-label" for="aoOperatorOf">Operator of</label>
           </div>
          </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apPoliceId" class="form-control-file" />
-            <label class="form-label" for="apPoliceId">BP/Court ID</label>
+            <input type="text" id="aoBpCourtId" class="form-control-file" formControlName="aoBpCourtId"/>
+            <label class="form-label" for="aoBpCourtId">BP/Court ID</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apFirstName" class="form-control-file" />
-            <label class="form-label" for="apFirstName">First Name</label>
+            <input type="text" id="aoFirstName" class="form-control-file" formControlName="aoFirstName"/>
+            <label class="form-label" for="aoFirstName">First Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="apLastName" class="form-control-file" />
-            <label class="form-label" for="apLastName">Last Name</label>
+            <input type="text" id="aoLastName" class="form-control-file" formControlName="aoLastName"/>
+            <label class="form-label" for="aoLastName">Last Name</label>
           </div>
         </div>
       </div>
@@ -39,23 +45,23 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apFatherName" class="form-control-file" />
-            <label class="form-label" for="apFatherName">Father's Name</label>
+            <input type="text" id="aoFatherName" class="form-control-file" formControlName="aoFatherName"/>
+            <label class="form-label" for="aoFatherName">Father's Name</label>
           </div>
         </div>
         <div class="col">
          <div class="form-outline">
-            <input type="text" id="apMotherName" class="form-control-file" />
-            <label class="form-label" for="apMotherName">Mothers's Name</label>
+            <input type="text" id="aoMotherName" class="form-control-file" formControlName="aoMotherName"/>
+            <label class="form-label" for="aoMotherName">Mothers's Name</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="apGender" class="form-control-file" name="gender">
+            <select type="dropdown" id="aoGender" class="form-control-file" name="gender" formControlName="aoGender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
-            <label class="form-label" for="apGender">Gender</label>
+            <label class="form-label" for="aoGender">Gender</label>
           </div>
          </div>
       </div>
@@ -63,19 +69,19 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="apDoB" class="form-control-file" />
-            <label class="form-label" for="apDoB">Date of Birth</label>
+            <input type="date" id="aoDoB" class="form-control-file" formControlName="aoDoB"/>
+            <label class="form-label" for="aoDoB">Date of Birth</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apDepartmentId" class="form-control-file"/>
-            <label class="form-label" for="apDepartmentId">Department ID</label>
+            <input type="text" id="aoDepartmentId" class="form-control-file" formControlName="aoDepartmentId"/>
+            <label class="form-label" for="aoDepartmentId">Department ID</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-              <select type="dropdown" id="apDepartmentType" class="form-control-file">
+              <select type="dropdown" id="aoDepartmentType" class="form-control-file" formControlName="aoDepartmentType">
                   <option value="Armed Branch/Range Police">Armed Branch/Range Police</option>
                   <option value="DMP">DMP</option>
                   <option value="RMP">RMP</option>
@@ -90,7 +96,7 @@
                   <option value="CID">CID</option>
                   <option value="DB">DB</option>
               </select>
-              <label class="form-label" for="apDepartmentType">Department Type</label>
+              <label class="form-label" for="aoDepartmentType">Department Type</label>
           </div>
         </div>
       </div>
@@ -98,7 +104,7 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="apDistrictName" class="form-control-file">
+            <select type="dropdown" id="aoDistrictName" class="form-control-file" formControlName="aoDistrictName">
               <option value="Bagerhat">Bagerhat</option>
               <option value="Bandarban">Bandarban</option>
               <option value="Barguna">Barguna</option>
@@ -164,13 +170,13 @@
               <option value="Tangail">Tangail</option>
               <option value="Thakurgaon">Thakurgaon</option>
             </select>
-            <label class="form-label" for="apDistrictName">District Name</label>
+            <label class="form-label" for="aoDistrictName">District Name</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apThanaName" class="form-control-file" />
-            <label class="form-label" for="apThanaName">Thana Name/Workplace</label>
+            <input type="text" id="aoThanaName" class="form-control-file" formControlName="aoThanaName"/>
+            <label class="form-label" for="aoThanaName">Thana Name/Workplace</label>
           </div>
         </div>
       </div>
@@ -178,13 +184,13 @@
       <div class="row">
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apBatch" class="form-control-file"/>
-            <label class="form-label" for="apBatch">Batch</label>
+            <input type="text" id="aoBatch" class="form-control-file" formControlName="aoBatch"/>
+            <label class="form-label" for="aoBatch">Batch</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <select type="dropdown" id="apRank" class="form-control-file">
+            <select type="dropdown" id="aoRank" class="form-control-file" formControlName="aoRank">
               <option value="Constable">Constable</option>
               <option value="ASI">ASI</option>
               <option value="SI">SI</option>
@@ -197,34 +203,19 @@
               <option value="AdIGP">AdIGP</option>
               <option value="IGP">IGP</option>
           </select>
-          <label class="form-label" for="apRank">Rank</label>
+          <label class="form-label" for="aoRank">Rank</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="date" id="apPlacementDate" class="form-control-file" />
-            <label class="form-label" for="apPlacementDate">Placement Date</label>
+            <input type="date" id="aoPlacementDate" class="form-control-file" formControlName="aoPlacementDate"/>
+            <label class="form-label" for="aoPlacementDate">Placement Date</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apWeaponSerial" class="form-control-file"/>
-            <label class="form-label" for="apWeaponSerial">Weapon Serial</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-            <div class="form-outline">
-              <textarea name="" id="apPresentAddress" class="form-control-file" ></textarea>
-              <label class="form-label" for="apPresentAddress">Present Address</label>
-            </div>
-        </div>
-        <div class="col">
-          <div class="form-outline">
-            <textarea name="" id="apPermanentAddress" class="form-control-file" ></textarea>
-            <label class="form-label" for="apPermanentAddress">Permanent Address</label>
+            <input type="text" id="aoWeaponSerial" class="form-control-file" formControlName="aoWeaponSerial"/>
+            <label class="form-label" for="aoWeaponSerial">Weapon Serial</label>
           </div>
         </div>
       </div>
@@ -232,20 +223,14 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="email" id="apEmail" class="form-control-file" />
-              <label class="form-label" for="apEmail">Email</label>
+              <textarea name="" id="aoPresentAddress" class="form-control-file" formControlName="aoPresentAddress"></textarea>
+              <label class="form-label" for="aoPresentAddress">Present Address</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="text" id="apOfficePhone" class="form-control-file" />
-            <label class="form-label" for="apOfficePhone">Office Phone</label>
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-outline">
-            <input type="text" id="apPersonalPhone" class="form-control-file" />
-            <label class="form-label" for="apPersonalPhone">Personal Phone</label>
+            <textarea name="" id="aoPermanentAddress" class="form-control-file" formControlName="aoPermanentAddress"></textarea>
+            <label class="form-label" for="aoPermanentAddress">Permanent Address</label>
           </div>
         </div>
       </div>
@@ -253,20 +238,41 @@
       <div class="row">
         <div class="col">
             <div class="form-outline">
-              <input type="text" id="apUserName" class="form-control-file" />
-              <label class="form-label" for="apUserName">User Name</label>
+              <input type="email" id="aoEmail" class="form-control-file" formControlName="aoEmail"/>
+              <label class="form-label" for="aoEmail">Email</label>
             </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="apPassword" class="form-control-file" />
-            <label class="form-label" for="apPassword">Password</label>
+            <input type="text" id="aoOfficePhone" class="form-control-file" formControlName="aoOfficePhone"/>
+            <label class="form-label" for="aoOfficePhone">Office Phone</label>
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <input type="password" id="apConfirmPassword" class="form-control-file" />
-            <label class="form-label" for="apConfirmPassword">Confirm Password</label>
+            <input type="text" id="aoPersonalPhone" class="form-control-file" formControlName="aoPersonalPhone"/>
+            <label class="form-label" for="aoPersonalPhone">Personal Phone</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <div class="form-outline">
+              <input type="text" id="aoUserName" class="form-control-file" formControlName="aoUserName"/>
+              <label class="form-label" for="aoUserName">User Name</label>
+            </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="password" id="aoPassword" class="form-control-file" formControlName="aoPassword"/>
+            <label class="form-label" for="aoPassword">Password</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="password" id="aoConfirmPassword" class="form-control-file" formControlName="aoConfirmPassword"/>
+            <label class="form-label" for="aoConfirmPassword">Confirm Password</label>
           </div>
         </div>
       </div>

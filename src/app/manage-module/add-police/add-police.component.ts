@@ -1,4 +1,4 @@
-import { addPoliceInterface } from './../manage-module-interface';
+import { IAddPolice } from './../manage-module-interface';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ApserviceService } from './apservice.service';
@@ -10,13 +10,13 @@ import { ApserviceService } from './apservice.service';
 })
 export class AddPoliceComponent implements OnInit {
 
-  policeList: addPoliceInterface[] = [];
+  policeList: IAddPolice[] = [];
   addPoliceForm! : FormGroup;
 
   constructor(private apService : ApserviceService) { }
 
   ngOnInit() : void {
-    this.apService.getData().subscribe((old : addPoliceInterface[]) => {
+    this.apService.getData().subscribe((old : IAddPolice[]) => {
       this.policeList = old;
     })
 
@@ -59,13 +59,13 @@ export class AddPoliceComponent implements OnInit {
     }
   }
 
-  delete (field : addPoliceInterface) {
+  delete (field : IAddPolice) {
     this.apService.deleteData(field).subscribe(res=> {
       this.ngOnInit();
     })
   }
 
-  edit (field : addPoliceInterface) {
+  edit (field : IAddPolice) {
     this.addPoliceForm = new FormGroup({
       apPoliceId : new FormControl(field.apPoliceId),
       apFirstName : new FormControl(field.apFirstName),

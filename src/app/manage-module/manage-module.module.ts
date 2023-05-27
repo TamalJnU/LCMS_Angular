@@ -15,6 +15,8 @@ import { SettingComponent } from './setting/setting.component';
 import { AddOperatorComponent } from './add-operator/add-operator.component';
 import { OtherFormsComponent } from './other-forms/other-forms.component';
 import { CommunityPoliceFormComponent } from './other-forms/community-police-form/community-police-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +37,10 @@ import { CommunityPoliceFormComponent } from './other-forms/community-police-for
   ],
   imports: [
     CommonModule,
-    ManageModuleRoutingModule
+    ManageModuleRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class ManageModuleModule { }

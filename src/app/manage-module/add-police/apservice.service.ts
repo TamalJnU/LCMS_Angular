@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { addPoliceInterface } from '../manage-module-interface';
+import { IAddPolice } from '../manage-module-interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,25 +9,25 @@ import { Observable } from 'rxjs';
 export class ApserviceService {
 
   // private api = "http://localhost:8080";
-  private url = "http://localhost:3000/list";
+  private url = "http://localhost:8080";
 
   constructor(private httpClient : HttpClient) { }
 
-  getData() : Observable <addPoliceInterface[]> {
-    const data = this.httpClient.get<addPoliceInterface[]>(this.url);
+  getData() : Observable <IAddPolice[]> {
+    const data = this.httpClient.get<IAddPolice[]>(this.url);
     return data;
   }
 
-  addData(field : addPoliceInterface) {
-    return this.httpClient.post<addPoliceInterface>(this.url, field);
+  addData(field : IAddPolice) {
+    return this.httpClient.post<IAddPolice>(this.url, field);
   }
 
-  deleteData(field : addPoliceInterface) : Observable <addPoliceInterface> {
-    return this.httpClient.delete<addPoliceInterface>(this.url + '/' + field.apPoliceId);
+  deleteData(field : IAddPolice) : Observable <IAddPolice> {
+    return this.httpClient.delete<IAddPolice>(this.url + '/' + field.apPoliceId);
   }
 
-  updateData(field : addPoliceInterface) {
-    return this.httpClient.put<addPoliceInterface>(this.url + '/' + field.apPoliceId, field);
+  updateData(field : IAddPolice) {
+    return this.httpClient.put<IAddPolice>(this.url + '/' + field.apPoliceId, field);
   }
 
 }
