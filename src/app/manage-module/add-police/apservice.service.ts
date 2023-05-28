@@ -1,14 +1,19 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IAddPolice } from '../manage-module-interface';
 import { Observable } from 'rxjs';
+
+const httpOptions = {
+  headers : new HttpHeaders({
+    'Constant-type' : 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApserviceService {
 
-  // private api = "http://localhost:8080";
   private url = "http://localhost:8080";
 
   constructor(private httpClient : HttpClient) { }
@@ -19,7 +24,7 @@ export class ApserviceService {
   }
 
   addData(field : IAddPolice) {
-    return this.httpClient.post<IAddPolice>(this.url, field);
+    return this.httpClient.post<IAddPolice>(this.url, field, httpOptions);
   }
 
   deleteData(field : IAddPolice) : Observable <IAddPolice> {
@@ -27,7 +32,7 @@ export class ApserviceService {
   }
 
   updateData(field : IAddPolice) {
-    return this.httpClient.put<IAddPolice>(this.url + '/' + field.apPoliceId, field);
+    return this.httpClient.put<IAddPolice>(this.url + '/' + field.apPoliceId, field, httpOptions);
   }
 
 }

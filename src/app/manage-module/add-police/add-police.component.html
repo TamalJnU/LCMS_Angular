@@ -332,9 +332,9 @@
           <td>{{v.apPassword}}</td>
           <td>{{v.apConfirmPassword}}</td>
           <td>
-              <button class="btn btn-success">View</button>
-              <button class="btn btn-warning">Edit</button>
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-success" >View</button>
+              <button class="btn btn-warning" (click)="edit(v)">Edit</button>
+              <button class="btn btn-danger" (click)="delete(v)">Delete</button>
           </td>
         </tr>
         </tbody>
