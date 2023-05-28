@@ -16,7 +16,7 @@ export class AddPoliceComponent implements OnInit {
   constructor(private apService : ApserviceService) { }
 
   ngOnInit() : void {
-    this.apService.getData().subscribe((old : IAddPolice[]) => {
+    this.apService.getAllPolices().subscribe((old : IAddPolice[]) => {
       this.policeList = old;
     })
 
@@ -49,18 +49,18 @@ export class AddPoliceComponent implements OnInit {
 
   submit () {
     if(this.addPoliceForm.value.apPoliceId !== null){
-      this.apService.updateData(this.addPoliceForm.value).subscribe(res =>{
+      this.apService.updatePolice(this.addPoliceForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
-      this.apService.addData(this.addPoliceForm.value).subscribe(res =>{
+      this.apService.createPolice(this.addPoliceForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddPolice) {
-    this.apService.deleteData(field).subscribe(res=> {
+    this.apService.deletePolice(field).subscribe(res=> {
       this.ngOnInit();
     })
   }

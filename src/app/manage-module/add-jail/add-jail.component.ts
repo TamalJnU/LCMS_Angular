@@ -16,7 +16,7 @@ export class AddJailComponent implements OnInit {
   constructor(private ajailService : AjailServiceService) { }
 
   ngOnInit(): void {
-    this.ajailService.getData().subscribe((old : IAddJail[]) => {
+    this.ajailService.getAllJails().subscribe((old : IAddJail[]) => {
       this.JailList = old;
     })
 
@@ -38,18 +38,18 @@ export class AddJailComponent implements OnInit {
 
   submit () {
     if(this.addJailForm.value.ajailJailId !== null){
-      this.ajailService.updateData(this.addJailForm.value).subscribe(res =>{
+      this.ajailService.updateJail(this.addJailForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
-      this.ajailService.addData(this.addJailForm.value).subscribe(res =>{
+      this.ajailService.createJail(this.addJailForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddJail) {
-    this.ajailService.deleteData(field).subscribe(res=> {
+    this.ajailService.deleteJail(field).subscribe(res=> {
       this.ngOnInit();
     })
   }

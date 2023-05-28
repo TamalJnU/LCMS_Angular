@@ -8,26 +8,25 @@ import { IAddPp } from '../manage-module-interface';
 })
 export class AppServiceService {
 
-    // private api = "http://localhost:8080";
-    private url = "http://localhost:4200/add";
+    private url = "http://localhost:8080/api";
 
     constructor(private httpClient : HttpClient) { }
   
-    getData() : Observable <IAddPp[]> {
-      const data = this.httpClient.get<IAddPp[]>(this.url);
+    getAllPps() : Observable <IAddPp[]> {
+      const data = this.httpClient.get<IAddPp[]>(this.url + '/pps');
       return data;
     }
   
-    addData(field : IAddPp) {
-      return this.httpClient.post<IAddPp>(this.url, field);
+    createPp(field : IAddPp) {
+      return this.httpClient.post<IAddPp>(this.url + '/pps', field);
     }
   
-    deleteData(field : IAddPp) : Observable <IAddPp> {
-      return this.httpClient.delete<IAddPp>(this.url + '/' + field.appPpId);
+    deletePp(field : IAddPp) : Observable <IAddPp> {
+      return this.httpClient.delete<IAddPp>(this.url + '/pps' + '/' + field.appPpId);
     }
   
-    updateData(field : IAddPp) {
-      return this.httpClient.put<IAddPp>(this.url + '/' + field.appPpId, field);
+    updatePp(field : IAddPp) {
+      return this.httpClient.put<IAddPp>(this.url + '/pps' + '/' + field.appPpId, field);
     }
 
 }

@@ -8,26 +8,25 @@ import { IAddJail } from '../manage-module-interface';
 })
 export class AjailServiceService {
 
-    // private api = "http://localhost:8080";
-    private url = "http://localhost:4200/add";
+    private url = "http://localhost:8080/api";
 
     constructor(private httpClient : HttpClient) { }
   
-    getData() : Observable <IAddJail[]> {
-      const data = this.httpClient.get<IAddJail[]>(this.url);
+    getAllJails() : Observable <IAddJail[]> {
+      const data = this.httpClient.get<IAddJail[]>(this.url + '/jails');
       return data;
     }
   
-    addData(field : IAddJail) {
-      return this.httpClient.post<IAddJail>(this.url, field);
+    createJail(field : IAddJail) {
+      return this.httpClient.post<IAddJail>(this.url + '/jails', field);
     }
   
-    deleteData(field : IAddJail) : Observable <IAddJail> {
-      return this.httpClient.delete<IAddJail>(this.url + '/' + field.ajailJailId);
+    deleteJail(field : IAddJail) : Observable <IAddJail> {
+      return this.httpClient.delete<IAddJail>(this.url + '/jails' + '/' + field.ajailJailId);
     }
   
-    updateData(field : IAddJail) {
-      return this.httpClient.put<IAddJail>(this.url + '/' + field.ajailJailId, field);
+    updateJail(field : IAddJail) {
+      return this.httpClient.put<IAddJail>(this.url + '/jails' + '/' + field.ajailJailId, field);
     }
     
 }

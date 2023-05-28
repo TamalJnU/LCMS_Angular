@@ -16,7 +16,7 @@ export class AddOperatorComponent implements OnInit {
   constructor (private aoService : AoServiceService) { }
 
   ngOnInit(): void {
-    this.aoService.getData().subscribe((old : IAddOperator[]) => {
+    this.aoService.getAllOperators().subscribe((old : IAddOperator[]) => {
       this.operatorList = old;
     })
 
@@ -51,18 +51,18 @@ export class AddOperatorComponent implements OnInit {
 
   submit () {
     if(this.addOperatorForm.value.aoOperatorId !== null){
-      this.aoService.updateData(this.addOperatorForm.value).subscribe(res =>{
+      this.aoService.updateOperator(this.addOperatorForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
-      this.aoService.addData(this.addOperatorForm.value).subscribe(res =>{
+      this.aoService.createOperator(this.addOperatorForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddOperator) {
-    this.aoService.deleteData(field).subscribe(res=> {
+    this.aoService.deleteOperator(field).subscribe(res=> {
       this.ngOnInit();
     })
   }

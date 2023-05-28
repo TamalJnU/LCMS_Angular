@@ -16,7 +16,7 @@ export class AddJailerComponent implements OnInit {
   constructor (private ajailerService : AjailerServiceService) { }
 
   ngOnInit(): void {
-    this.ajailerService.getData().subscribe((old : IAddJailer[]) => {
+    this.ajailerService.getAllJailers().subscribe((old : IAddJailer[]) => {
       this.jailerList = old;
     })
 
@@ -47,18 +47,18 @@ export class AddJailerComponent implements OnInit {
 
   submit () {
     if(this.addJailerForm.value.apPoliceId !== null){
-      this.ajailerService.updateData(this.addJailerForm.value).subscribe(res =>{
+      this.ajailerService.updateJailer(this.addJailerForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
-      this.ajailerService.addData(this.addJailerForm.value).subscribe(res =>{
+      this.ajailerService.createJailer(this.addJailerForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddJailer) {
-    this.ajailerService.deleteData(field).subscribe(res=> {
+    this.ajailerService.deleteJailer(field).subscribe(res=> {
       this.ngOnInit();
     })
   }

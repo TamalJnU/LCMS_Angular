@@ -16,7 +16,7 @@ export class AddJudgeComponent implements OnInit {
   constructor(private ajService : AjServiceService) { }
 
   ngOnInit(): void {
-    this.ajService.getData().subscribe((old : IAddJudge[]) => {
+    this.ajService.getAllJudges().subscribe((old : IAddJudge[]) => {
       this.judgeList = old;
     })
 
@@ -50,18 +50,18 @@ export class AddJudgeComponent implements OnInit {
 
   submit () {
     if(this.addJudgeForm.value.ajJudgeId !== null){
-      this.ajService.updateData(this.addJudgeForm.value).subscribe(res =>{
+      this.ajService.updateJudge(this.addJudgeForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
-      this.ajService.addData(this.addJudgeForm.value).subscribe(res =>{
+      this.ajService.createJudge(this.addJudgeForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddJudge) {
-    this.ajService.deleteData(field).subscribe(res=> {
+    this.ajService.deleteJudge(field).subscribe(res=> {
       this.ngOnInit();
     })
   }

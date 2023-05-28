@@ -14,25 +14,25 @@ const httpOptions = {
 })
 export class ApserviceService {
 
-  private url = "http://localhost:8080";
+  private api = "http://localhost:8080/api";
 
   constructor(private httpClient : HttpClient) { }
 
-  getData() : Observable <IAddPolice[]> {
-    const data = this.httpClient.get<IAddPolice[]>(this.url);
+  public getAllPolices() : Observable <IAddPolice[]> {
+    const data = this.httpClient.get<IAddPolice[]>(this.api + '/polices');
     return data;
   }
 
-  addData(field : IAddPolice) {
-    return this.httpClient.post<IAddPolice>(this.url, field, httpOptions);
+  public createPolice(field : IAddPolice) {
+    return this.httpClient.post<IAddPolice>(this.api + '/polices', field, httpOptions);
   }
 
-  deleteData(field : IAddPolice) : Observable <IAddPolice> {
-    return this.httpClient.delete<IAddPolice>(this.url + '/' + field.apPoliceId);
+  public deletePolice(field : IAddPolice) : Observable <IAddPolice> {
+    return this.httpClient.delete<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId);
   }
 
-  updateData(field : IAddPolice) {
-    return this.httpClient.put<IAddPolice>(this.url + '/' + field.apPoliceId, field, httpOptions);
+  public updatePolice(field : IAddPolice) {
+    return this.httpClient.put<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId, field, httpOptions);
   }
 
 }

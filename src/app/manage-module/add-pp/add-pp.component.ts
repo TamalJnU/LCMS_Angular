@@ -16,7 +16,7 @@ export class AddPpComponent implements OnInit {
   constructor(private appService : AppServiceService) { }
 
   ngOnInit(): void {
-    this.appService.getData().subscribe((old : IAddPp[]) => {
+    this.appService.getAllPps().subscribe((old : IAddPp[]) => {
       this.ppList = old;
     })
 
@@ -50,18 +50,18 @@ export class AddPpComponent implements OnInit {
 
   submit () {
     if(this.addPpForm.value.appPpId !== null){
-      this.appService.updateData(this.addPpForm.value).subscribe(res =>{
+      this.appService.updatePp(this.addPpForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
-      this.appService.addData(this.addPpForm.value).subscribe(res =>{
+      this.appService.createPp(this.addPpForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddPp) {
-    this.appService.deleteData(field).subscribe(res=> {
+    this.appService.deletePp(field).subscribe(res=> {
       this.ngOnInit();
     })
   }
