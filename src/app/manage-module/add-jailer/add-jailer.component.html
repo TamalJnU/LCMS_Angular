@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-    <form (ngSubmit)="submit()">
+    <form [formGroup]="addJailerForm" (ngSubmit)="submit()">
       <br>
       <a href="#" routerLink="/general/jailer-information" ><button class="btn btn-secondary">Back to List</button></a>
       <br>
@@ -47,13 +47,13 @@
             </select>
             <label class="form-label" for="ajailerGender">Gender</label>
           </div>
-          <div class="col">
-            <div class="form-outline">
-              <input type="date" id="ajailerDoB" class="form-control-file" formControlName="ajailerDoB"/>
-              <label class="form-label" for="ajailerDoB">Date of Birth</label>
-            </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="date" id="ajailerDoB" class="form-control-file" formControlName="ajailerDoB"/>
+            <label class="form-label" for="ajailerDoB">Date of Birth</label>
           </div>
-         </div>
+        </div>
       </div>
 
       <div class="row">

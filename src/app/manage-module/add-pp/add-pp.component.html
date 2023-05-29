@@ -1,6 +1,6 @@
 <div class="content-wrapper" style="background-color: cadetblue;">
   <div class="container-fluid">
-    <form (ngSubmit)="submit()">
+    <form [formGroup]="addPpForm" (ngSubmit)="submit()">
       <br>
       <a href="#" routerLink="/general/pp-information" ><button class="btn btn-secondary">Back to List</button></a>
       <br>

@@ -2,6 +2,7 @@ import { IAddPolice } from './../manage-module-interface';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ApserviceService } from './apservice.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-police',
@@ -13,7 +14,7 @@ export class AddPoliceComponent implements OnInit {
   policeList: IAddPolice[] = [];
   addPoliceForm! : FormGroup;
 
-  constructor(private apService : ApserviceService) { }
+  constructor(private apService : ApserviceService, private rout: Router) { }
 
   ngOnInit() : void {
     this.apService.getAllPolices().subscribe((old : IAddPolice[]) => {
@@ -50,11 +51,16 @@ export class AddPoliceComponent implements OnInit {
   submit () {
     if(this.addPoliceForm.value.apPoliceId !== null){
       this.apService.updatePolice(this.addPoliceForm.value).subscribe(res =>{
-        this.ngOnInit();
+        // this.ngOnInit();
+        this.rout.navigateByUrl('/general/police-information');
       })
     }else {
       this.apService.createPolice(this.addPoliceForm.value).subscribe(res =>{
-        this.ngOnInit();
+        alert("saved")
+        this.rout.navigateByUrl('/general/police-information');
+
+      },(error)=>{
+        alert(error+"sssss")
       })
     }
   }
@@ -62,6 +68,13 @@ export class AddPoliceComponent implements OnInit {
   delete (field : IAddPolice) {
     this.apService.deletePolice(field).subscribe(res=> {
       this.ngOnInit();
+    })
+  }
+
+  view (field : IAddPolice) {
+    this.apService.getPolice(field).subscribe(res=> {
+      //this.ngOnInit();
+      this.rout.navigateByUrl('/manage/add-police');
     })
   }
 

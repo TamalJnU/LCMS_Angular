@@ -8,25 +8,29 @@ import { IAddJail } from '../manage-module-interface';
 })
 export class AjailServiceService {
 
-    private url = "http://localhost:8080/api";
+    private api = "http://localhost:8080/api";
 
     constructor(private httpClient : HttpClient) { }
   
-    getAllJails() : Observable <IAddJail[]> {
-      const data = this.httpClient.get<IAddJail[]>(this.url + '/jails');
+    public getAllJails() : Observable <IAddJail[]> {
+      const data = this.httpClient.get<IAddJail[]>(this.api + '/jails');
       return data;
     }
-  
-    createJail(field : IAddJail) {
-      return this.httpClient.post<IAddJail>(this.url + '/jails', field);
+
+    public getJail(field : IAddJail) : Observable <IAddJail> {
+      return this.httpClient.get<IAddJail>(this.api + '/jails' + '/' + field.ajailJailId);
     }
   
-    deleteJail(field : IAddJail) : Observable <IAddJail> {
-      return this.httpClient.delete<IAddJail>(this.url + '/jails' + '/' + field.ajailJailId);
+    public createJail(field : IAddJail) {
+      return this.httpClient.post<IAddJail>(this.api + '/jails', field);
     }
   
-    updateJail(field : IAddJail) {
-      return this.httpClient.put<IAddJail>(this.url + '/jails' + '/' + field.ajailJailId, field);
+    public deleteJail(field : IAddJail) : Observable <IAddJail> {
+      return this.httpClient.delete<IAddJail>(this.api + '/jails' + '/' + field.ajailJailId);
+    }
+  
+    public updateJail(field : IAddJail) {
+      return this.httpClient.put<IAddJail>(this.api + '/jails' + '/' + field.ajailJailId, field);
     }
     
 }

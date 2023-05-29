@@ -66,6 +66,12 @@ export class AddPpComponent implements OnInit {
     })
   }
 
+  view (field : IAddPp) {
+    this.appService.getPp(field).subscribe(res=> {
+      this.ngOnInit();
+    })
+  }
+
   edit (field : IAddPp) {
     this.addPpForm = new FormGroup({
       appPpId : new FormControl(field.appPpId),

@@ -16,7 +16,7 @@ export class AddCourtComponent implements OnInit {
   constructor(private acService : AcServiceService) { }
 
   ngOnInit(): void {
-    this.acService.getData().subscribe((old : IAddCourt[]) => {
+    this.acService.getAllCourts().subscribe((old : IAddCourt[]) => {
       this.courtList = old;
     })
 
@@ -41,18 +41,24 @@ export class AddCourtComponent implements OnInit {
 
   submit(){
     if(this.addCourtForm.value.acCourtId !== null){
-      this.acService.updateData(this.addCourtForm.value).subscribe(res => {
+      this.acService.updateCourt(this.addCourtForm.value).subscribe(res => {
         this.ngOnInit();
       })
     } else {
-      this.acService.addData(this.addCourtForm.value).subscribe(res => {
+      this.acService.createCourt(this.addCourtForm.value).subscribe(res => {
         this.ngOnInit();
       })
     }
   }
 
   delete (field : IAddCourt) {
-    this.acService.deleteData(field).subscribe(res => {
+    this.acService.deleteCourt(field).subscribe(res => {
+      this.ngOnInit();
+    })
+  }
+
+  view (field : IAddCourt) {
+    this.acService.getCourt(field).subscribe(res => {
       this.ngOnInit();
     })
   }

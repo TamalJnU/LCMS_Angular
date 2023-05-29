@@ -66,6 +66,12 @@ export class AddJudgeComponent implements OnInit {
     })
   }
 
+  view (field : IAddJudge) {
+    this.ajService.getJudge(field).subscribe(res=> {
+      this.ngOnInit();
+    })
+  }
+
   edit (field : IAddJudge) {
     this.addJudgeForm = new FormGroup({
       ajJudgeId : new FormControl(field.ajJudgeId),

@@ -7,25 +7,32 @@ import { IAddPp } from '../manage-module-interface';
   providedIn: 'root'
 })
 export class AppServiceService {
+    getAllPolices() {
+      throw new Error('Method not implemented.');
+    }
 
     private url = "http://localhost:8080/api";
 
     constructor(private httpClient : HttpClient) { }
   
-    getAllPps() : Observable <IAddPp[]> {
+    public getAllPps() : Observable <IAddPp[]> {
       const data = this.httpClient.get<IAddPp[]>(this.url + '/pps');
       return data;
     }
+
+    public getPp(field : IAddPp) : Observable <IAddPp> {
+      return this.httpClient.get<IAddPp>(this.url + '/pps' + '/' + field.appPpId);
+    }
   
-    createPp(field : IAddPp) {
+    public createPp(field : IAddPp) {
       return this.httpClient.post<IAddPp>(this.url + '/pps', field);
     }
   
-    deletePp(field : IAddPp) : Observable <IAddPp> {
+    public deletePp(field : IAddPp) : Observable <IAddPp> {
       return this.httpClient.delete<IAddPp>(this.url + '/pps' + '/' + field.appPpId);
     }
   
-    updatePp(field : IAddPp) {
+    public updatePp(field : IAddPp) {
       return this.httpClient.put<IAddPp>(this.url + '/pps' + '/' + field.appPpId, field);
     }
 

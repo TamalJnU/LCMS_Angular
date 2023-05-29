@@ -8,24 +8,28 @@ import { IAddJudge } from '../manage-module-interface';
 })
 export class AjServiceService {
 
-  private url = "http://localhost:8080/api";
+  private api = "http://localhost:8080/api";
 
   constructor(private httpClient : HttpClient) { }
 
-  getAllJudges() : Observable <IAddJudge[]> {
-    const data = this.httpClient.get<IAddJudge[]>(this.url + '/judges');
+  public getAllJudges() : Observable <IAddJudge[]> {
+    const data = this.httpClient.get<IAddJudge[]>(this.api + '/judges');
     return data;
   }
 
-  createJudge(field : IAddJudge) {
-    return this.httpClient.post<IAddJudge>(this.url + '/judges', field);
+  public getJudge(field : IAddJudge) : Observable <IAddJudge> {
+    return this.httpClient.get<IAddJudge>(this.api + '/judges' + '/' + field.ajJudgeId)
   }
 
-  deleteJudge(field : IAddJudge) : Observable <IAddJudge> {
-    return this.httpClient.delete<IAddJudge>(this.url + '/judges' + '/' + field.ajJudgeId);
+  public createJudge(field : IAddJudge) {
+    return this.httpClient.post<IAddJudge>(this.api + '/judges', field);
   }
 
-  updateJudge(field : IAddJudge) {
-    return this.httpClient.put<IAddJudge>(this.url + '/judges' + '/' + field.ajJudgeId, field);
+  public deleteJudge(field : IAddJudge) : Observable <IAddJudge> {
+    return this.httpClient.delete<IAddJudge>(this.api + '/judges' + '/' + field.ajJudgeId);
+  }
+
+  public updateJudge(field : IAddJudge) {
+    return this.httpClient.put<IAddJudge>(this.api + '/judges' + '/' + field.ajJudgeId, field);
   }
 }

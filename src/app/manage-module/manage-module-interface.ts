@@ -1,5 +1,5 @@
 export interface IAddPolice{
-  apPoliceId : string,
+  apPoliceId : number,
   apFirstName : string,
   apLastName : string,
   apFatherName : string,
@@ -25,7 +25,7 @@ export interface IAddPolice{
 }
 
 export interface IAddJudge{
-  ajJudgeId : string,
+  ajJudgeId : number,
   ajFirstName : string,
   ajLastName : string,
   ajFatherName : string,
@@ -52,7 +52,7 @@ export interface IAddJudge{
 }
 
 export interface IAddPp{
-  appPpId : string,
+  appPpId : number,
   appFirstName : string,
   appLastName : string,
   appFatherName : string,
@@ -79,7 +79,7 @@ export interface IAddPp{
 }
 
 export interface IAddOperator{
-  aoOperatorId : string,
+  aoOperatorId : number,
   aoOperatorOf : string,
   aoBpCourtId : string,
   aoFirstName : string,
@@ -107,7 +107,7 @@ export interface IAddOperator{
 }
 
 export interface IAddJailer{
-  ajailerJailerId : string,
+  ajailerJailerId : number,
   ajailerFirstName : string,
   ajailerLastName : string,
   ajailerFatherName : string,
@@ -131,7 +131,7 @@ export interface IAddJailer{
 }
 
 export interface IAddJail{
-  ajailJailId : string,
+  ajailJailId : number,
   ajailJailName : string,
   ajailJailType : string,
   ajailJailCity : string,
@@ -146,7 +146,7 @@ export interface IAddJail{
 }
 
 export interface IAddCourt{
-  acCourtId : string,
+  acCourtId : number,
   acCourtType : string,
   acCourtCity : string,
   acCourtName : string,
@@ -164,7 +164,7 @@ export interface IAddCourt{
 }
 
 export interface IAddCommunityPolice{
-  acpCommunityPoliceId : string,
+  acpCommunityPoliceId : number,
   acpFirstName : string,
   acpLastName : string,
   acpFatherName : string,

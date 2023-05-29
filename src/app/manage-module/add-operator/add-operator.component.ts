@@ -67,6 +67,12 @@ export class AddOperatorComponent implements OnInit {
     })
   }
 
+  view (field : IAddOperator) {
+    this.aoService.getOperator(field).subscribe(res=> {
+      this.ngOnInit();
+    })
+  }
+
   edit(field : IAddOperator) {
     this.addOperatorForm = new FormGroup({
       aoOperatorId : new FormControl(field.aoOperatorId),

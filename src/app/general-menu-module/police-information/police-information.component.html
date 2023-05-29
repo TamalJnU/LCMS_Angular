@@ -43,7 +43,7 @@
             <th>Actions</th>
           </thead>
           <tbody>
-          <tr **ngFor="let v of policeList">
+          <tr *ngFor="let v of police">
             <td>{{v.apPoliceId}}</td>
             <td>{{v.apFirstName}}</td>
             <td>{{v.apLastName}}</td>
@@ -70,6 +70,7 @@
             <td>
                 <button class="btn btn-success">View</button>
                 <button class="btn btn-warning">Edit</button>
+                <button class="btn btn-danger">Delete</button>
             </td>
           </tr>
           </tbody>

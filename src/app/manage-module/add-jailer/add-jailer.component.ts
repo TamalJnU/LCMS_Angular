@@ -46,11 +46,16 @@ export class AddJailerComponent implements OnInit {
   }
 
   submit () {
-    if(this.addJailerForm.value.apPoliceId !== null){
+    if(this.addJailerForm.value.ajailerJailerId !== null){         //  || this.addJailerForm.value.apPoliceId != undefined
+
+      console.log('--------update');
+      
       this.ajailerService.updateJailer(this.addJailerForm.value).subscribe(res =>{
         this.ngOnInit();
       })
     }else {
+      console.log('--------create');
+
       this.ajailerService.createJailer(this.addJailerForm.value).subscribe(res =>{
         this.ngOnInit();
       })
@@ -63,9 +68,15 @@ export class AddJailerComponent implements OnInit {
     })
   }
 
+  view (field : IAddJailer) {
+    this.ajailerService.getJailer(field).subscribe(res=> {
+      this.ngOnInit();
+    })
+  }
+
   edit (field : IAddJailer) {
     this.addJailerForm = new FormGroup({
-      ajailerJailerId : new FormControl(field.ajailerJailId),
+      ajailerJailerId : new FormControl(field.ajailerJailerId),
       ajailerFirstName : new FormControl(field.ajailerFirstName),
       ajailerLastName : new FormControl(field.ajailerLastName),
       ajailerFatherName : new FormControl(field.ajailerFatherName),

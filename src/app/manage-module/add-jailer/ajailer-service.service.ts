@@ -8,24 +8,28 @@ import { IAddJailer } from '../manage-module-interface';
 })
 export class AjailerServiceService {
 
-  private url = "http://localhost:8080/api";
+  private api = "http://localhost:8080/api";
 
   constructor(private httpClient : HttpClient) { }
 
-  getAllJailers() : Observable <IAddJailer[]> {
-    const data = this.httpClient.get<IAddJailer[]>(this.url + '/jailers');
+  public getAllJailers() : Observable <IAddJailer[]> {
+    const data = this.httpClient.get<IAddJailer[]>(this.api + '/jailers');
     return data;
   }
 
-  createJailer(field : IAddJailer) {
-    return this.httpClient.post<IAddJailer>(this.url + '/jailers', field);
+  public getJailer(field : IAddJailer) : Observable <IAddJailer> {
+    return this.httpClient.get<IAddJailer>(this.api + '/jailers' + '/' + field.ajailerJailerId);
   }
 
-  deleteJailer(field : IAddJailer) : Observable <IAddJailer> {
-    return this.httpClient.delete<IAddJailer>(this.url + '/jailers' + '/' + field.ajailerJailerId);
+  public createJailer(field : IAddJailer) {
+    return this.httpClient.post<IAddJailer>(this.api + '/jailers', field);
   }
 
-  updateJailer(field : IAddJailer) {
-    return this.httpClient.put<IAddJailer>(this.url + '/jailers' + '/' + field.ajailerJailerId, field);
+  public deleteJailer(field : IAddJailer) : Observable <IAddJailer> {
+    return this.httpClient.delete<IAddJailer>(this.api + '/jailers' + '/' + field.ajailerJailerId);
+  }
+
+  public updateJailer(field : IAddJailer) {
+    return this.httpClient.put<IAddJailer>(this.api + '/jailers' + '/' + field.ajailerJailerId, field);
   }
 }

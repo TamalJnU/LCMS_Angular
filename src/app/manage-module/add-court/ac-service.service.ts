@@ -8,25 +8,29 @@ import { IAddCourt } from '../manage-module-interface';
 })
 export class AcServiceService {
 
-  private url = "http://localhost:4200/add";
+  private api = "http://localhost:8080/api";
 
   constructor(private httpClient : HttpClient) { }
 
-  getData() : Observable <IAddCourt[]> {
-    const data = this.httpClient.get<IAddCourt[]>(this.url);
+  public getAllCourts() : Observable <IAddCourt[]> {
+    const data = this.httpClient.get<IAddCourt[]>(this.api + '/courts');
     return data;
   }
 
-  addData(field : IAddCourt) {
-    return this.httpClient.post<IAddCourt>(this.url, field);
+  public getCourt(field : IAddCourt) : Observable <IAddCourt> {
+    return this.httpClient.get<IAddCourt>(this.api + '/courts' + '/' + field.acCourtId)
   }
 
-  deleteData(field : IAddCourt) : Observable <IAddCourt> {
-    return this.httpClient.delete<IAddCourt>(this.url + '/' + field.acCourtId);
+  public createCourt(field : IAddCourt) {
+    return this.httpClient.post<IAddCourt>(this.api + '/courts', field);
   }
 
-  updateData(field : IAddCourt) {
-    return this.httpClient.put<IAddCourt>(this.url + '/' + field.acCourtId, field);
+  public deleteCourt(field : IAddCourt) : Observable <IAddCourt> {
+    return this.httpClient.delete<IAddCourt>(this.api + '/courts' + '/' + field.acCourtId);
+  }
+
+  public updateCourt(field : IAddCourt) {
+    return this.httpClient.put<IAddCourt>(this.api + '/courts' + '/' + field.acCourtId, field);
   }
 
 }

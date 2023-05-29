@@ -54,6 +54,12 @@ export class AddJailComponent implements OnInit {
     })
   }
 
+  view (field : IAddJail) {
+    this.ajailService.getJail(field).subscribe(res => {
+      this.ngOnInit();
+    })
+  }
+
   edit (field : IAddJail) {
     this.addJailForm = new FormGroup({
       ajailJailId : new FormControl(field.ajailJailId),

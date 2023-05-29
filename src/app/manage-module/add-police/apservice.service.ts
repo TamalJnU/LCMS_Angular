@@ -23,8 +23,12 @@ export class ApserviceService {
     return data;
   }
 
+  public getPolice(field : IAddPolice) : Observable <IAddPolice> {
+    return this.httpClient.get<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId);
+  }
+
   public createPolice(field : IAddPolice) {
-    return this.httpClient.post<IAddPolice>(this.api + '/polices', field, httpOptions);
+    return this.httpClient.post<IAddPolice>(this.api + '/polices', field);
   }
 
   public deletePolice(field : IAddPolice) : Observable <IAddPolice> {
@@ -32,7 +36,7 @@ export class ApserviceService {
   }
 
   public updatePolice(field : IAddPolice) {
-    return this.httpClient.put<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId, field, httpOptions);
+    return this.httpClient.put<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId, field);
   }
 
 }
