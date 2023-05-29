@@ -11,6 +11,7 @@ export class PoliceInformationComponent implements OnInit{
 
 
   police!: IAddPolice[];
+  //policeData! : IAddPolice;
   constructor(private api: ApserviceService){}
 
   ngOnInit(): void {
@@ -19,12 +20,20 @@ export class PoliceInformationComponent implements OnInit{
       next:res=>{
         this.police =res;
         console.log('Police List--------');
-          
+
       },
       error:console.log
-      
+
     })
   }
+
+  // editPoliceInfo(id : number) {
+  //   this.api.editPoliceById(id).subscribe((data) => {
+  //     this.policeData = data;
+  //     console.log(data);
+
+  //   })
+  // }
 
 
 

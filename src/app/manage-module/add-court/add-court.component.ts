@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IAddCourt } from '../manage-module-interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AcServiceService } from './ac-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-court',
@@ -13,7 +14,7 @@ export class AddCourtComponent implements OnInit {
   courtList! : IAddCourt[];
   addCourtForm! : FormGroup;
 
-  constructor(private acService : AcServiceService) { }
+  constructor(private acService : AcServiceService, private router : Router) { }
 
   ngOnInit(): void {
     this.acService.getAllCourts().subscribe((old : IAddCourt[]) => {
@@ -42,11 +43,11 @@ export class AddCourtComponent implements OnInit {
   submit(){
     if(this.addCourtForm.value.acCourtId !== null){
       this.acService.updateCourt(this.addCourtForm.value).subscribe(res => {
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/court-information');
       })
     } else {
       this.acService.createCourt(this.addCourtForm.value).subscribe(res => {
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/court-information');
       })
     }
   }

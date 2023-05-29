@@ -13,6 +13,7 @@ import { NoticeBoardComponent } from './notice-board/notice-board.component';
 import { JailerInformationComponent } from './jailer-information/jailer-information.component';
 import { PpInformationComponent } from './pp-information/pp-information.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JudgeInformationComponent } from './judge-information/judge-information.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     JailInformationComponent,
     NoticeBoardComponent,
     JailerInformationComponent,
-    PpInformationComponent
+    PpInformationComponent,
+    JudgeInformationComponent
   ],
   imports: [
     CommonModule,

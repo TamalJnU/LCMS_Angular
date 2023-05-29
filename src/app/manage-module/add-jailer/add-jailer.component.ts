@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IAddJailer } from '../manage-module-interface';
 import { AjailerServiceService } from './ajailer-service.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-jailer',
@@ -13,7 +14,7 @@ export class AddJailerComponent implements OnInit {
   jailerList! : IAddJailer[];
   addJailerForm!:FormGroup;
 
-  constructor (private ajailerService : AjailerServiceService) { }
+  constructor (private ajailerService : AjailerServiceService, private router : Router) { }
 
   ngOnInit(): void {
     this.ajailerService.getAllJailers().subscribe((old : IAddJailer[]) => {
@@ -49,15 +50,15 @@ export class AddJailerComponent implements OnInit {
     if(this.addJailerForm.value.ajailerJailerId !== null){         //  || this.addJailerForm.value.apPoliceId != undefined
 
       console.log('--------update');
-      
+
       this.ajailerService.updateJailer(this.addJailerForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/jailer-information');
       })
     }else {
       console.log('--------create');
 
       this.ajailerService.createJailer(this.addJailerForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/jailer-information');
       })
     }
   }

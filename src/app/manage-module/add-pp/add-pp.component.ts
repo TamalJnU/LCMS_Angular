@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IAddOperator, IAddPp } from '../manage-module-interface';
+import { IAddPp } from '../manage-module-interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AppServiceService } from './app-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-pp',
@@ -13,7 +14,7 @@ export class AddPpComponent implements OnInit {
   ppList! : IAddPp[];
   addPpForm! : FormGroup;
 
-  constructor(private appService : AppServiceService) { }
+  constructor(private appService : AppServiceService, private router: Router) { }
 
   ngOnInit(): void {
     this.appService.getAllPps().subscribe((old : IAddPp[]) => {
@@ -51,11 +52,11 @@ export class AddPpComponent implements OnInit {
   submit () {
     if(this.addPpForm.value.appPpId !== null){
       this.appService.updatePp(this.addPpForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/pp-information');
       })
     }else {
       this.appService.createPp(this.addPpForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/pp-information');
       })
     }
   }

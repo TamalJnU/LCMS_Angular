@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IAddJail } from '../manage-module-interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AjailServiceService } from './ajail-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-jail',
@@ -13,7 +14,7 @@ export class AddJailComponent implements OnInit {
   JailList! : IAddJail[];
   addJailForm! : FormGroup;
 
-  constructor(private ajailService : AjailServiceService) { }
+  constructor(private ajailService : AjailServiceService, private router : Router) { }
 
   ngOnInit(): void {
     this.ajailService.getAllJails().subscribe((old : IAddJail[]) => {
@@ -39,11 +40,11 @@ export class AddJailComponent implements OnInit {
   submit () {
     if(this.addJailForm.value.ajailJailId !== null){
       this.ajailService.updateJail(this.addJailForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/jail-information');
       })
     }else {
       this.ajailService.createJail(this.addJailForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/jail-information');
       })
     }
   }

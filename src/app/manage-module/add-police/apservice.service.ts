@@ -39,4 +39,8 @@ export class ApserviceService {
     return this.httpClient.put<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId, field);
   }
 
+  public editPoliceById(id: number): Observable<IAddPolice>{
+    return this.httpClient.get<IAddPolice>(this.api + '/polices' + '/' + id);
+  }
+
 }

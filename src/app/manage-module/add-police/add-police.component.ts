@@ -13,6 +13,7 @@ export class AddPoliceComponent implements OnInit {
 
   policeList: IAddPolice[] = [];
   addPoliceForm! : FormGroup;
+  id !: number;
 
   constructor(private apService : ApserviceService, private rout: Router) { }
 
@@ -105,5 +106,9 @@ export class AddPoliceComponent implements OnInit {
       apConfirmPassword : new FormControl(field.apConfirmPassword)
     })
   }
+
+  // editPolice(id: number) {
+
+  // }
 
 }

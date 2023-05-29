@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IAddJudge } from '../manage-module-interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AjServiceService } from './aj-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-judge',
@@ -13,7 +14,7 @@ export class AddJudgeComponent implements OnInit {
   judgeList! : IAddJudge[];
   addJudgeForm! : FormGroup;
 
-  constructor(private ajService : AjServiceService) { }
+  constructor(private ajService : AjServiceService, private router : Router) { }
 
   ngOnInit(): void {
     this.ajService.getAllJudges().subscribe((old : IAddJudge[]) => {
@@ -51,11 +52,11 @@ export class AddJudgeComponent implements OnInit {
   submit () {
     if(this.addJudgeForm.value.ajJudgeId !== null){
       this.ajService.updateJudge(this.addJudgeForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/judge-information');
       })
     }else {
       this.ajService.createJudge(this.addJudgeForm.value).subscribe(res =>{
-        this.ngOnInit();
+        this.router.navigateByUrl('/general/judge-information');
       })
     }
   }

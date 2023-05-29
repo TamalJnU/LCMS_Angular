@@ -10,12 +10,14 @@ import { SystemInformationComponent } from './system-information/system-informat
 import { SidebarComponentComponent } from '../sidebar-component/sidebar-component.component';
 import { JailerInformationComponent } from './jailer-information/jailer-information.component';
 import { PpInformationComponent } from './pp-information/pp-information.component';
+import { JudgeInformationComponent } from './judge-information/judge-information.component';
 
 const routes: Routes = [
   { path : 'change-password', component : ChangePasswordComponent },
   { path : 'court-information', component : CourtInformationComponent },
   { path : 'jail-information', component : JailInformationComponent },
   { path : 'jailer-information', component : JailerInformationComponent },
+  { path : 'judge-information', component : JudgeInformationComponent },
   { path : 'lcms-statistics', component : LcmsStatisticsComponent },
   { path : 'notice-board', component : NoticeBoardComponent },
   { path : 'police-information', component : PoliceInformationComponent },
