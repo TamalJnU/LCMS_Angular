@@ -17,7 +17,7 @@ const routes: Routes = [
   { path : 'add-jail', component : AddJailComponent },
   { path : 'add-jailer', component : AddJailerComponent },
   { path : 'add-judge', component : AddJudgeComponent },
-  { path : 'add-police', component : AddPoliceComponent },
+  { path : 'add-police/:id', component : AddPoliceComponent },
   { path : 'add-pp', component : AddPpComponent },
   { path : 'add-operator', component : AddOperatorComponent },
   { path : 'manage-system-log', component : ManageSystemLogComponent },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AddPoliceComponent } from 'src/app/manage-module/add-police/add-police.component';
 import { ApserviceService } from 'src/app/manage-module/add-police/apservice.service';
 import { IAddPolice } from 'src/app/manage-module/manage-module-interface';
@@ -12,8 +13,9 @@ export class PoliceInformationComponent implements OnInit{
 
 
   police!: IAddPolice[];
+  id! : number;
   //policeData! : IAddPolice;
-  constructor(private api: ApserviceService, private com : AddPoliceComponent){}
+  constructor(private api: ApserviceService, private router : Router){}
 
   ngOnInit(): void {
 
@@ -28,8 +30,18 @@ export class PoliceInformationComponent implements OnInit{
   }
 
   viewPolice(field : IAddPolice) {
-    this.com.view(field);
+    this.api.getPolice(field).subscribe(res=> {
+      //this.ngOnInit();
+      this.router.navigateByUrl('/manage/add-police');
+    })
   }
+
+
+  edit(id:number){
+    this.router.navigateByUrl('/manage/add-police/'+id);
+  }
+
+    
 
   // editPoliceInfo(id : number) {
   //   this.api.editPoliceById(id).subscribe((data) => {

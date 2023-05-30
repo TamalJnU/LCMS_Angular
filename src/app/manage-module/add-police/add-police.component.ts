@@ -15,13 +15,16 @@ export class AddPoliceComponent implements OnInit {
   addPoliceForm! : FormGroup;
   id !: number;
 
-  constructor(private apService : ApserviceService, private rout: Router) { }
+  constructor(private apService : ApserviceService, private rout: Router, private acrouting: ActivatedRoute) { }
+
+
 
   ngOnInit() : void {
-    this.apService.getAllPolices().subscribe((old : IAddPolice[]) => {
-      this.policeList = old;
-    })
 
+    this.id = this.acrouting.snapshot.params['id'];
+
+    if(this.id===null){
+      
     this.addPoliceForm = new FormGroup({
       apPoliceId : new FormControl(),
       apFirstName : new FormControl(''),
@@ -47,6 +50,50 @@ export class AddPoliceComponent implements OnInit {
       apPassword : new FormControl(''),
       apConfirmPassword : new FormControl('')
     })
+    }else{
+
+      this.apService.getPoliceByID(this.id).subscribe({
+        next:res=>{
+
+          
+          this.addPoliceForm = new FormGroup({
+            apPoliceId : new FormControl(res.apPoliceId),
+            apFirstName : new FormControl(res.apFirstName),
+            apLastName : new FormControl(res.apLastName),
+            apFatherName : new FormControl(res.apFatherName),
+            apMotherName : new FormControl(res.apMotherName),
+            apGender : new FormControl(res.apGender),
+            apDoB : new FormControl(res.apDoB),
+            apDepartmentId : new FormControl(res.apDepartmentId),
+            apDepartmentType : new FormControl(res.apDepartmentType),
+            apDistrictName : new FormControl(res.apDistrictName),
+            apThanaName : new FormControl(res.apThanaName),
+            apBatch : new FormControl(res.apBatch),
+            apRank : new FormControl(res.apRank),
+            apPlacementDate : new FormControl(res.apPlacementDate),
+            apWeaponSerial : new FormControl(res.apWeaponSerial),
+            apPresentAddress : new FormControl(res.apPresentAddress),
+            apPermanentAddress : new FormControl(res.apPermanentAddress),
+            apEmail : new FormControl(res.apEmail),
+            apOfficePhone : new FormControl(res.apOfficePhone),
+            apPersonalPhone : new FormControl(res.apPersonalPhone),
+            apUserName : new FormControl(res.apUserName),
+            apPassword : new FormControl(res.apPassword),
+            apConfirmPassword : new FormControl(res.apConfirmPassword)
+          })
+          console.log(this.addPoliceForm.value);
+          
+        },
+        error:console.log
+      })
+
+
+    }
+
+    this.apService.getAllPolices().subscribe((old : IAddPolice[]) => {
+      this.policeList = old;
+    })
+
   }
 
   submit () {
@@ -107,8 +154,6 @@ export class AddPoliceComponent implements OnInit {
     })
   }
 
-  // editPolice(id: number) {
-
-  // }
+  //allowPublicKeyRetrieval=true. sb ap te
 
 }

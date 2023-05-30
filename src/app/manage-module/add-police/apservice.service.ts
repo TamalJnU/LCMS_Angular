@@ -15,6 +15,7 @@ const httpOptions = {
 export class ApserviceService {
 
   private api = "http://localhost:8080/api";
+  id! : number;
 
   constructor(private httpClient : HttpClient) { }
 
@@ -27,6 +28,10 @@ export class ApserviceService {
     return this.httpClient.get<IAddPolice>(this.api + '/polices' + '/' + field.apPoliceId);
   }
 
+
+  public getPoliceByID(id : number) : Observable <IAddPolice> {
+    return this.httpClient.get<IAddPolice>(this.api + '/polices' + '/' + id);
+  }
   public createPolice(field : IAddPolice) {
     return this.httpClient.post<IAddPolice>(this.api + '/polices', field);
   }
