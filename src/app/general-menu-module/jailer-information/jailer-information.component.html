@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: cadetblue;">
+<div class="content-wrapper" style="background-color: cadetblue; overflow-y: scroll;">
     <div class="container-fluid">
     <form>
       <br>
@@ -40,33 +40,33 @@
             <th>Confirm Password</th>
             <th>Actions</th>
           </thead>
-          <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let v of jailer">
+            <td>{{v.ajailerJailerId}}</td>
+            <td>{{v.ajailerFirstName}}</td>
+            <td>{{v.ajailerLastName}}</td>
+            <td>{{v.ajailerFatherName}}</td>
+            <td>{{v.ajailerMotherName}}</td>
+            <td>{{v.ajailerGender}}</td>
+            <td>{{v.ajailerDoB}}</td>
+            <td>{{v.ajailerJailId}}</td>
+            <td>{{v.ajailerPoliceId}}</td>
+            <td>{{v.ajailerJailType}}</td>
+            <td>{{v.ajailerJailCity}}</td>
+            <td>{{v.ajailerJailName}}</td>
+            <td>{{v.ajailerPlacementDate}}</td>
+            <td>{{v.ajailerEmail}}</td>
+            <td>{{v.ajailerOfficePhone}}</td>
+            <td>{{v.ajailerPersonalPhone}}</td>
+            <td>{{v.ajailerPresentAddress}}</td>
+            <td>{{v.ajailerPermanentAddress}}</td>
+            <td>{{v.ajailerUserName}}</td>
+            <td>{{v.ajailerPassword}}</td>
+            <td>{{v.ajailerConfirmPassword}}</td>
             <td>
                 <button class="btn btn-success">View</button>
                 <button class="btn btn-warning">Edit</button>
             </td>
-          </tbody>
+          </tr>
         </table>
     </div>
 </div>

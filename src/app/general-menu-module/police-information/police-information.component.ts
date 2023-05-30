@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddPoliceComponent } from 'src/app/manage-module/add-police/add-police.component';
 import { ApserviceService } from 'src/app/manage-module/add-police/apservice.service';
 import { IAddPolice } from 'src/app/manage-module/manage-module-interface';
 
@@ -12,7 +13,7 @@ export class PoliceInformationComponent implements OnInit{
 
   police!: IAddPolice[];
   //policeData! : IAddPolice;
-  constructor(private api: ApserviceService){}
+  constructor(private api: ApserviceService, private com : AddPoliceComponent){}
 
   ngOnInit(): void {
 
@@ -23,8 +24,11 @@ export class PoliceInformationComponent implements OnInit{
 
       },
       error:console.log
-
     })
+  }
+
+  viewPolice(field : IAddPolice) {
+    this.com.view(field);
   }
 
   // editPoliceInfo(id : number) {

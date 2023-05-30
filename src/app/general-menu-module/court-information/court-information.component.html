@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: cadetblue;">
+<div class="content-wrapper" style="background-color: cadetblue; overflow-y: scroll;">
     <div class="container-fluid">
     <form>
       <br>
@@ -34,27 +34,27 @@
             <th>Confirm Password</th>
             <th>Actions</th>
           </thead>
-          <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let v of court">
+            <td>{{v.acCourtId}}</td>
+            <td>{{v.acCourtType}}</td>
+            <td>{{v.acCourtCity}}</td>
+            <td>{{v.acCourtName}}</td>
+            <td>{{v.acCourtNo}}</td>
+            <td>{{v.acTribunalName}}</td>
+            <td>{{v.acChiefJustice}}</td>
+            <td>{{v.acChiefJusticeId}}</td>
+            <td>{{v.acPublicProsecutor}}</td>
+            <td>{{v.acPublicProsecutorId}}</td>
+            <td>{{v.acEmail}}</td>
+            <td>{{v.acCourtPhone}}</td>
+            <td>{{v.acUserName}}</td>
+            <td>{{v.acPassword}}</td>
+            <td>{{v.acConfirmPassword}}</td>
             <td>
                 <button class="btn btn-success">View</button>
                 <button class="btn btn-warning">Edit</button>
             </td>
-          </tbody>
+          </tr>
         </table>
     </div>
 </div>

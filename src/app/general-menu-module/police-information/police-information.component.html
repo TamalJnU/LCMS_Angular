@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: cadetblue;">
+<div class="content-wrapper" style="background-color: cadetblue; overflow-y: scroll;">
     <div class="container-fluid">
     <form>
       <br>
@@ -68,7 +68,7 @@
             <td>{{v.apPassword}}</td>
             <td>{{v.apConfirmPassword}}</td>
             <td>
-                <button class="btn btn-success">View</button>
+                <button class="btn btn-success" (click)="viewPolice(v)">View</button>
                 <button class="btn btn-warning">Edit</button>
                 <button class="btn btn-danger">Delete</button>
             </td>

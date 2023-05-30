@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: cadetblue;">
+<div class="content-wrapper" style="background-color: cadetblue; overflow-y: scroll;">
     <div class="container-fluid">
     <form>
       <br>
@@ -43,36 +43,36 @@
             <th>Confirm Password</th>
             <th>Actions</th>
           </thead>
-          <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let v of pp">
+            <td>{{v.appPpId}}</td>
+            <td>{{v.appFirstName}}</td>
+            <td>{{v.appLastName}}</td>
+            <td>{{v.appFatherName}}</td>
+            <td>{{v.appMotherName}}</td>
+            <td>{{v.appGender}}</td>
+            <td>{{v.appDoB}}</td>
+            <td>{{v.appCourtId}}</td>
+            <td>{{v.appCourtType}}</td>
+            <td>{{v.appCourtCity}}</td>
+            <td>{{v.appCourtName}}</td>
+            <td>{{v.appCourtNo}}</td>
+            <td>{{v.appTribunalName}}</td>
+            <td>{{v.appChiefJustice}}</td>
+            <td>{{v.appChiefJusticeId}}</td>
+            <td>{{v.appPlacementDate}}</td>
+            <td>{{v.appEmail}}</td>
+            <td>{{v.appOfficePhone}}</td>
+            <td>{{v.appPersonalPhone}}</td>
+            <td>{{v.appPresentAddress}}</td>
+            <td>{{v.appPermanentAddress}}</td>
+            <td>{{v.appUserName}}</td>
+            <td>{{v.appPassword}}</td>
+            <td>{{v.appConfirmPassword}}</td>
             <td>
                 <button class="btn btn-success">View</button>
                 <button class="btn btn-warning">Edit</button>
             </td>
-          </tbody>
+          </tr>
         </table>
     </div>
 </div>

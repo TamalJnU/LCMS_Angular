@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: cadetblue;">
+<div class="content-wrapper" style="background-color: cadetblue; overflow-y: scroll;">
     <div class="container-fluid">
     <form>
       <br>
@@ -31,24 +31,24 @@
             <th>Confirm Password</th>
             <th>Actions</th>
           </thead>
-          <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let v of jail">
+            <td>{{v.ajailJailId}}</td>
+            <td>{{v.ajailJailName}}</td>
+            <td>{{v.ajailJailType}}</td>
+            <td>{{v.ajailJailCity}}</td>
+            <td>{{v.ajailJailSuperName}}</td>
+            <td>{{v.ajailJailSuperPoliceId}}</td>
+            <td>{{v.ajailJailEmail}}</td>
+            <td>{{v.ajailOfficePhone}}</td>
+            <td>{{v.ajailJailSuperPhone}}</td>
+            <td>{{v.ajailUserName}}</td>
+            <td>{{v.ajailPassword}}</td>
+            <td>{{v.ajailConfirmPassword}}</td>
             <td>
                 <button class="btn btn-success">View</button>
                 <button class="btn btn-warning">Edit</button>
             </td>
-          </tbody>
+          </tr>
         </table>
     </div>
 </div>

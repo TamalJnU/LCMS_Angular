@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: cadetblue;">
+<div class="content-wrapper" style="background-color: cadetblue; overflow-y: scroll;">
   <div class="container-fluid">
   <form>
     <br>
@@ -43,36 +43,36 @@
           <th>Confirm Password</th>
           <th>Actions</th>
         </thead>
-        <tbody>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr *ngFor="let v of judge">
+          <td>{{v.ajJudgeId}}</td>
+          <td>{{v.ajFirstName}}</td>
+          <td>{{v.ajLastName}}</td>
+          <td>{{v.ajFatherName}}</td>
+          <td>{{v.ajMotherName}}</td>
+          <td>{{v.ajGender}}</td>
+          <td>{{v.ajDoB}}</td>
+          <td>{{v.ajCourtId}}</td>
+          <td>{{v.ajCourtType}}</td>
+          <td>{{v.ajCourtCity}}</td>
+          <td>{{v.ajCourtName}}</td>
+          <td>{{v.ajCourtNo}}</td>
+          <td>{{v.ajTribunalName}}</td>
+          <td>{{v.ajChiefJustice}}</td>
+          <td>{{v.ajChiefJusticeId}}</td>
+          <td>{{v.ajPlacementDate}}</td>
+          <td>{{v.ajEmail}}</td>
+          <td>{{v.ajOfficePhone}}</td>
+          <td>{{v.ajPersonalPhone}}</td>
+          <td>{{v.ajPresentAddress}}</td>
+          <td>{{v.ajPermanentAddress}}</td>
+          <td>{{v.ajUserName}}</td>
+          <td>{{v.ajPassword}}</td>
+          <td>{{v.ajConfirmPassword}}</td>
           <td>
               <button class="btn btn-success">View</button>
               <button class="btn btn-warning">Edit</button>
           </td>
-        </tbody>
+        </tr>
       </table>
   </div>
 </div>
